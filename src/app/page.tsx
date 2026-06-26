@@ -40,7 +40,7 @@ export default function Home() {
             fill
             sizes="224px"
             quality={90}
-            className="object-cover object-[center_20%]"
+            className="object-cover object-center"
             priority
           />
         </div>
