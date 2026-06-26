@@ -52,8 +52,8 @@ export default function Home() {
         </h1>
 
         <p className="max-w-2xl text-lg text-muted text-balance">
-          Product Manager with 9 years experience scaling 0-to-1 products across
-          startups and big tech. Currently at Amazon, owning product strategy for
+          Experienced Product Manager with 9 years of 0-to-1 product experience
+          across startups and big tech. Currently at Amazon, owning product strategy for
           Cross Border business. Previously scaled a K-12 live learning platform
           from 0 to 6M+ users, driving $100M+ in revenue impact. MBA from the
           UW&apos;s Foster School of Business with AI specialization.
