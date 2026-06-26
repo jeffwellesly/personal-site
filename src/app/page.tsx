@@ -1,3 +1,16 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: { absolute: "PersonalSite — Your Name" },
+  description:
+    "Hi, I'm Your Name. I build things for the web — a personal site for my writing, projects, and ideas.",
+  openGraph: {
+    title: "PersonalSite — Your Name",
+    description:
+      "Hi, I'm Your Name. I build things for the web — a personal site for my writing, projects, and ideas.",
+  },
+};
+
 export default function Home() {
   return (
     <div className="flex flex-col gap-16">

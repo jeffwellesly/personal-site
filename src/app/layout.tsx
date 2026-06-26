@@ -17,8 +17,24 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "PersonalSite",
-  description: "My personal site built with Next.js and Tailwind CSS",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+  ),
+  title: {
+    default: "PersonalSite",
+    template: "%s | PersonalSite",
+  },
+  description:
+    "Personal site and blog by Your Name — web development, writing, and open source.",
+  openGraph: {
+    siteName: "PersonalSite",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 // Runs synchronously before first paint — reads localStorage then falls back

@@ -14,7 +14,15 @@ export function generateMetadata({
   params: { slug: string };
 }): Metadata {
   const post = getPost(params.slug);
-  return { title: post.title, description: post.description };
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: "article",
+    },
+  };
 }
 
 const rehypePrettyCodeOptions = {
