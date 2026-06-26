@@ -9,8 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "var(--bg)",
+        surface:    "var(--bg-subtle)",
+        card:       "var(--bg-card)",
+        border:     "var(--line)",
+        foreground: "var(--text)",
+        muted:      "var(--text-muted)",
+        faint:      "var(--text-faint)",
+        accent: {
+          DEFAULT: "var(--accent)",
+          hover:   "var(--accent-hover)",
+          fg:      "var(--accent-fg)",
+          subtle:  "var(--accent-subtle)",
+          text:    "var(--accent-text)",
+        },
       },
     },
   },

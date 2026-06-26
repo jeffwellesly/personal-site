@@ -2,26 +2,163 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Light theme (default) ── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg:            #ffffff;
+  --bg-subtle:     #f9fafb;
+  --bg-card:       #ffffff;
+  --line:          #e5e7eb;
+  --text:          #111827;
+  --text-muted:    #6b7280;
+  --text-faint:    #9ca3af;
+  --accent:        #4f46e5;
+  --accent-hover:  #4338ca;
+  --accent-fg:     #ffffff;
+  --accent-subtle: #eef2ff;
+  --accent-text:   #4f46e5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Dark theme ── */
+[data-theme="dark"] {
+  --bg:            #0f172a;
+  --bg-subtle:     #1e293b;
+  --bg-card:       #1e293b;
+  --line:          #334155;
+  --text:          #f1f5f9;
+  --text-muted:    #94a3b8;
+  --text-faint:    #475569;
+  --accent:        #6366f1;
+  --accent-hover:  #818cf8;
+  --accent-fg:     #ffffff;
+  --accent-subtle: #1e1b4b;
+  --accent-text:   #a5b4fc;
 }
 
+/* ── Base styles ── */
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background-color: var(--bg);
+  color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Smooth color transitions on theme toggle — only color props so other
+   animations (transforms, opacity) are unaffected */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* ── Shiki dual-theme syntax highlighting ── */
+/* Light: use --shiki-light CSS vars set inline by rehype-pretty-code */
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+/* Dark: switch to --shiki-dark vars */
+html[data-theme="dark"] code[data-theme*=" "],
+html[data-theme="dark"] code[data-theme*=" "] span {
+  color: var(--shiki-dark);
+  background-color: var(--shiki-dark-bg);
+}
+
+/* ── Prose: typography for MDX content ── */
+.prose {
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.prose :is(h1, h2, h3, h4) {
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose h1 { font-size: 2rem; }
+.prose h2 { font-size: 1.5rem; }
+.prose h3 { font-size: 1.25rem; }
+
+.prose p {
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+.prose a {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  opacity: 0.8;
+}
+
+.prose strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.prose :is(ul, ol) {
+  padding-left: 1.5em;
+  margin-bottom: 1.25em;
+}
+
+.prose li {
+  margin-bottom: 0.4em;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 2em 0;
+}
+
+/* Inline code */
+.prose :not(pre) > code {
+  background-color: var(--bg-subtle);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-size: 0.875em;
+  font-family: ui-monospace, monospace;
+}
+
+/* Fenced code blocks */
+.prose pre {
+  background-color: var(--shiki-light-bg, var(--bg-subtle));
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  /* Disable the generic color transition so code token colors don't blur */
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+html[data-theme="dark"] .prose pre {
+  background-color: var(--shiki-dark-bg, var(--bg-subtle));
+}
+
+.prose pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
 }
