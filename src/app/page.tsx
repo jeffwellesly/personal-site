@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: { absolute: "Jeff Wellesly — Product Leader" },
+  title: { absolute: "Jeff Wellesly — Product Manager" },
   description:
-    "Product leader with 10 years experience scaling 0-to-1 products across startups and big tech.",
+    "Product Manager with 9 years experience scaling 0-to-1 products across startups and big tech.",
   openGraph: {
-    title: "Jeff Wellesly — Product Leader",
+    title: "Jeff Wellesly — Product Manager",
     description:
-      "Product leader with 10 years experience scaling 0-to-1 products across startups and big tech.",
+      "Product Manager with 9 years experience scaling 0-to-1 products across startups and big tech.",
   },
 };
 
@@ -51,11 +51,11 @@ export default function Home() {
         </h1>
 
         <p className="max-w-2xl text-lg text-muted text-balance">
-          Product leader with 10 years experience scaling 0-to-1 products across
+          Product Manager with 9 years experience scaling 0-to-1 products across
           startups and big tech. Currently at Amazon, owning product strategy for
-          Cross Border team. Previously scaled a K-12 live learning platform from
-          0 to 6M+ users, driving $100M+ in cumulative revenue impact. MBA from
-          the UW&apos;s Foster School of Business, AI specialization.
+          Cross Border business. Previously scaled a K-12 live learning platform
+          from 0 to 6M+ users, driving $100M+ in revenue impact. MBA from the
+          UW&apos;s Foster School of Business with AI specialization.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3">
