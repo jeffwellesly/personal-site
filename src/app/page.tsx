@@ -33,19 +33,19 @@ export default function Home() {
       {/* Hero */}
       <section className="flex flex-col items-center text-center gap-6 py-20">
         {/* Profile photo */}
-        <div className="relative w-44 h-44 rounded-full overflow-hidden ring-4 ring-accent-subtle shadow-md">
+        <div className="relative w-56 h-56 rounded-full overflow-hidden ring-4 ring-accent-subtle shadow-md">
           <Image
             src="/profile.jpg"
             alt="Jeff Wellesly"
             fill
-            sizes="176px"
+            sizes="224px"
             quality={90}
             className="object-cover object-[center_20%]"
             priority
           />
         </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground text-balance">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground text-balance">
           Hi, I&apos;m{" "}
           <span className="text-accent-text">Jeff Wellesly</span>
         </h1>
