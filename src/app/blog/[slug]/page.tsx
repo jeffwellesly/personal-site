@@ -63,7 +63,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
           source={post.content}
           options={{
             mdxOptions: {
-              rehypePlugins: [[rehypePrettyCode as any, rehypePrettyCodeOptions]],
+              rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
             },
           }}
         />
