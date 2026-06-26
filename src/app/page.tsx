@@ -33,12 +33,14 @@ export default function Home() {
       {/* Hero */}
       <section className="flex flex-col items-center text-center gap-6 py-20">
         {/* Profile photo */}
-        <div className="relative w-28 h-28 rounded-full overflow-hidden ring-4 ring-accent-subtle shadow-md">
+        <div className="relative w-44 h-44 rounded-full overflow-hidden ring-4 ring-accent-subtle shadow-md">
           <Image
             src="/profile.jpg"
             alt="Jeff Wellesly"
             fill
-            className="object-cover"
+            sizes="176px"
+            quality={90}
+            className="object-cover object-[center_20%]"
             priority
           />
         </div>
