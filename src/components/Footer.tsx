@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-surface border-t border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm font-semibold text-foreground">PersonalSite</p>
+          <p className="text-sm font-semibold text-foreground">Jeff Wellesly</p>
 
           <nav className="flex items-center gap-6">
             <Link href="/" className="text-sm text-muted hover:text-accent-text transition-colors">
@@ -20,7 +20,7 @@ export default function Footer() {
           </nav>
 
           <p className="text-sm text-faint">
-            &copy; {new Date().getFullYear()} PersonalSite. All rights reserved.
+            &copy; {new Date().getFullYear()} Jeff Wellesly. All rights reserved.
           </p>
         </div>
       </div>
