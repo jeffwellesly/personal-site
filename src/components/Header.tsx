@@ -26,7 +26,7 @@ export default function Header() {
             <span className="inline-flex w-8 h-8 rounded-lg bg-accent text-accent-fg items-center justify-center text-sm font-black">
               P
             </span>
-            PersonalSite
+            Jeff Wellesly
           </Link>
 
           {/* Desktop nav + toggle */}

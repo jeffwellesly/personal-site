@@ -22,13 +22,13 @@ export const metadata: Metadata = {
       (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
   ),
   title: {
-    default: "PersonalSite",
-    template: "%s | PersonalSite",
+    default: "Jeff Wellesly",
+    template: "%s | Jeff Wellesly",
   },
   description:
-    "Personal site and blog by Your Name — web development, writing, and open source.",
+    "Product Manager with 9 years experience scaling 0-to-1 products across startups and big tech.",
   openGraph: {
-    siteName: "PersonalSite",
+    siteName: "Jeff Wellesly",
     type: "website",
     locale: "en_US",
   },
