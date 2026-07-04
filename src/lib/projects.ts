@@ -27,7 +27,6 @@ export const projects: Project[] = [
       "Ship It is a live learning product for PMs, founders, and non-technical builders who want to become technically fluent without going through a full engineering bootcamp. The product turns software development and AI/ML learning into structured tracks, simple lessons, and hands-on projects. Learners can pick a track, understand the concept in plain language, and build something real using tools like Claude Code, GitHub, Supabase, and Vercel.",
     status: "Live Product",
     tags: [
-      "Live Product",
       "EdTech",
       "AI/ML",
       "Software Development",
