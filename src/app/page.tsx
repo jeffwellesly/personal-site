@@ -124,30 +124,47 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {projects.map((p) => (
-            <div
-              key={p.slug}
-              className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3"
-            >
-              <div className="flex items-start justify-between gap-3">
-                <h3 className="font-semibold text-foreground text-lg">{p.name}</h3>
-                <span className="shrink-0 text-xs font-medium bg-accent-subtle text-accent-text px-2 py-1 rounded-full">
-                  {p.status}
-                </span>
-              </div>
-              <p className="text-sm text-muted leading-relaxed">{p.tagline}</p>
-              <div className="flex flex-wrap gap-2 mt-auto pt-2">
-                {p.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs bg-surface text-muted border border-border px-2 py-0.5 rounded-full"
-                  >
-                    {tag}
+          {projects.map((p) => {
+            const cardClassName =
+              "rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3";
+            const cardContent = (
+              <>
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-semibold text-foreground text-lg">{p.name}</h3>
+                  <span className="shrink-0 text-xs font-medium bg-accent-subtle text-accent-text px-2 py-1 rounded-full">
+                    {p.status}
                   </span>
-                ))}
+                </div>
+                <p className="text-sm text-muted leading-relaxed">{p.tagline}</p>
+                <div className="flex flex-wrap gap-2 mt-auto pt-2">
+                  {p.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs bg-surface text-muted border border-border px-2 py-0.5 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </>
+            );
+
+            return p.link ? (
+              <a
+                key={p.slug}
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cardClassName}
+              >
+                {cardContent}
+              </a>
+            ) : (
+              <div key={p.slug} className={cardClassName}>
+                {cardContent}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
