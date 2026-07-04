@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
@@ -37,7 +38,7 @@ export default function Portfolio() {
               {p.description}
             </p>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-5">
               {p.tags.map((tag) => (
                 <span
                   key={tag}
@@ -47,6 +48,19 @@ export default function Portfolio() {
                 </span>
               ))}
             </div>
+
+            {p.link && (
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-accent text-accent-fg text-sm font-semibold hover:bg-accent-hover transition-colors"
+                >
+                  Launch App
+                </a>
+              </div>
+            )}
           </article>
         ))}
       </div>

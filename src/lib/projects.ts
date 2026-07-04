@@ -19,12 +19,22 @@ export const projects: Project[] = [
     tags: ["Fintech", "AI/ML", "Stock Analysis", "Automation"],
   },
   {
-    slug: "stackd",
-    name: "Stackd",
-    tagline: "Turns technical fluency — APIs, databases, deployment, architecture — into a game PMs actually want to play.",
+    slug: "ship-it",
+    name: "Ship It",
+    tagline:
+      "A gamified learning platform that helps non-technical builders learn software development and AI/ML by shipping real projects step by step.",
     description:
-      "Most PM upskilling resources are either too shallow (glossaries) or too deep (engineering bootcamps). Stackd sits in the middle: structured, progressive challenges that build real mental models of how software systems work, wrapped in game mechanics that make it stick.",
-    status: "In Development",
-    tags: ["EdTech", "Gamification", "Product Management", "Technical Skills"],
+      "Ship It is a live learning product for PMs, founders, and non-technical builders who want to become technically fluent without going through a full engineering bootcamp. The product turns software development and AI/ML learning into structured tracks, simple lessons, and hands-on projects. Learners can pick a track, understand the concept in plain language, and build something real using tools like Claude Code, GitHub, Supabase, and Vercel.",
+    status: "Live Product",
+    tags: [
+      "Live Product",
+      "EdTech",
+      "AI/ML",
+      "Software Development",
+      "Technical Fluency",
+      "Claude Code",
+      "Product Strategy",
+    ],
+    link: "https://shipit-jeff.vercel.app/",
   },
 ];
