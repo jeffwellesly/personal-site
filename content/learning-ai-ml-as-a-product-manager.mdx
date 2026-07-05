@@ -1,0 +1,34 @@
+---
+title: "Learning AI/ML as a Product Manager: What Matters Beyond the Buzzwords"
+date: "2026-06-30"
+description: An AI feature is still a product. Here's the practical framework — inputs, outputs, evaluation, edge cases, and feedback loops — for deciding whether it actually improves user outcomes.
+tags: ["AI/ML", "Product Management", "Ship It", "Product Strategy"]
+---
+
+A lot of AI/ML content aimed at product people either drowns you in math you don't need or hand-waves everything into "it just knows." Neither is useful if your actual job is deciding whether to build an AI feature, and if so, what it should do. The useful frame is much simpler than either extreme: an AI/ML feature is still a product, and it's still made of inputs, outputs, and a system in between that you're responsible for evaluating — not trusting blindly.
+
+## Inputs and outputs: know exactly what goes in and what comes out
+
+Every model takes some input and produces some output. That sounds obvious, but the actual practice of being specific about this is where a lot of AI product thinking goes wrong. "It takes user data and gives recommendations" is not specific enough to make a product decision. What data, exactly? How recent does it need to be? What does the output actually look like — a ranked list, a single answer, a probability? PMs who can't answer this precisely usually can't tell you what happens when the input is missing, malformed, or unusual, which is exactly when things break in production.
+
+## Model behavior is probabilistic, not deterministic — plan accordingly
+
+Traditional software, given the same input, gives you the same output every time. Most AI/ML systems don't work that way — the same input can produce different outputs, and the model can be confidently wrong. This isn't a bug to be fixed away; it's the nature of the system, and it changes how you should design the product around it. You need a plan for what the user experience looks like when the model is wrong, not just when it's right. Products that only design for the model's best case tend to lose user trust the first time it isn't.
+
+## Evaluation is the actual product work, not a technical afterthought
+
+"Does this work" is not a yes/no question for an AI feature — it's a measurement question, and deciding what to measure is a product decision, not just a data science one. What does "good" look like for this specific feature? Accuracy against what benchmark? User satisfaction, measured how? A PM who hands off "make it good" without defining evaluation criteria is handing off an impossible task, because "good" for a recommendation feature and "good" for a fraud-detection feature mean structurally different things.
+
+## Edge cases are where AI features actually earn or lose trust
+
+The failure modes that matter most for AI products usually aren't the common case — they're the edge cases. What happens with an input the model has never seen anything like? What happens when the model is asked something outside its intended scope? A PM's job is to go looking for these cases deliberately, not to wait for users to find them first. This is the same discipline as edge-case thinking in any product, just with a system that's harder to fully predict.
+
+## Feedback loops decide whether the product gets better or worse over time
+
+Does the system learn from how it's used? If so, in which direction? A feedback loop that reinforces whatever a small, vocal set of users do can actively make a product worse over time, even while every individual interaction looks fine. Understanding whether your AI feature has a feedback loop — and what it's optimizing toward — is a product responsibility, because it determines the product's trajectory over months, not just its behavior on day one.
+
+## The question that actually matters: does this improve user outcomes?
+
+Underneath all of this is one question that AI hype tends to skip past: does the AI feature make the outcome better for the user, in a way you can actually measure, compared to not having it? Not "is it impressive," not "is it cutting-edge" — does it make the thing the user is trying to do easier, faster, or better. If you can't answer that clearly, the feature isn't ready to ship, regardless of how capable the underlying model is.
+
+This is the lens I built into Ship It's AI/ML track: not "here's how a transformer works," but here's how to think about an AI feature the way a PM should — as a system you're responsible for evaluating, not a black box you trust by default.

@@ -61,7 +61,17 @@ export default function PostPage({ params }: { params: { slug: string } }) {
         <h1 className="text-4xl font-bold text-foreground leading-tight mb-4">
           {post.title}
         </h1>
-        <p className="text-lg text-muted">{post.description}</p>
+        <p className="text-lg text-muted mb-4">{post.description}</p>
+        <div className="flex flex-wrap gap-2">
+          {post.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs bg-surface text-muted border border-border px-2 py-0.5 rounded-full"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
         <div className="mt-6 border-b border-border" />
       </header>
 

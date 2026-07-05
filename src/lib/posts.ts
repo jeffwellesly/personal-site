@@ -9,6 +9,7 @@ export type PostMeta = {
   title: string;
   date: string;
   description: string;
+  tags: string[];
 };
 
 export type Post = PostMeta & {
@@ -27,6 +28,7 @@ export function getAllPosts(): PostMeta[] {
         title: data.title as string,
         date: data.date as string,
         description: data.description as string,
+        tags: (data.tags as string[]) ?? [],
       };
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
@@ -41,6 +43,7 @@ export function getPost(slug: string): Post {
     title: data.title as string,
     date: data.date as string,
     description: data.description as string,
+    tags: (data.tags as string[]) ?? [],
     content,
   };
 }
