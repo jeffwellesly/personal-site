@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
@@ -18,9 +19,10 @@ export default function Portfolio() {
 
       <div className="flex flex-col gap-6">
         {projects.map((p) => {
+          const hasCaseStudy = Boolean(p.problem);
           const cardClassName =
             "rounded-xl border border-border bg-card p-8 shadow-sm" +
-            (p.link ? " hover:shadow-md transition-shadow block" : "");
+            (p.link && !hasCaseStudy ? " hover:shadow-md transition-shadow block" : "");
           const cardContent = (
             <>
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
@@ -49,7 +51,7 @@ export default function Portfolio() {
                 ))}
               </div>
 
-              {p.link && (
+              {p.link && !hasCaseStudy && (
                 <div className="flex flex-wrap gap-3">
                   <span className="px-4 py-2 rounded-lg bg-accent text-accent-fg text-sm font-semibold">
                     Launch App
@@ -58,6 +60,32 @@ export default function Portfolio() {
               )}
             </>
           );
+
+          if (hasCaseStudy) {
+            return (
+              <article key={p.slug} className={cardClassName}>
+                {cardContent}
+                <div className="flex flex-wrap gap-3">
+                  {p.link && (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-lg bg-accent text-accent-fg text-sm font-semibold hover:bg-accent-hover transition-colors"
+                    >
+                      Launch App
+                    </a>
+                  )}
+                  <Link
+                    href={`/portfolio/${p.slug}`}
+                    className="px-4 py-2 rounded-lg border border-border text-foreground text-sm font-semibold hover:bg-surface transition-colors"
+                  >
+                    Case Study
+                  </Link>
+                </div>
+              </article>
+            );
+          }
 
           return p.link ? (
             <a

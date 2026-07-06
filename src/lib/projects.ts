@@ -6,6 +6,9 @@ export type Project = {
   status: string;
   tags: string[];
   link?: string;
+  problem?: string;
+  targetUsers?: string;
+  myRole?: string;
 };
 
 export const projects: Project[] = [
@@ -35,5 +38,11 @@ export const projects: Project[] = [
       "Product Strategy",
     ],
     link: "https://shipit-jeff.vercel.app/",
+    problem:
+      "Most technical learning resources for non-engineers are either too shallow, like glossaries, or too deep, like engineering bootcamps. Ship It sits in the middle: practical, structured, project-based learning for people who need to understand how modern software and AI products are built.",
+    targetUsers:
+      "Product managers, founders, MBA students, career switchers, and non-technical builders.",
+    myRole:
+      "Product strategy, curriculum design, UX structure, content design, prototyping, and full product build.",
   },
 ];
