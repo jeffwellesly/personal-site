@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
+const companies = ["Amazon", "Mardamed", "Yuanfudao", "T.I.M.E", "Zuri Productions"];
+
 const expertise = [
   {
     title: "0-to-1 Product Strategy",
@@ -110,6 +112,33 @@ export default function Home() {
             Get in Touch
           </Link>
         </div>
+      </section>
+
+      {/* Previously worked with */}
+      <section
+        aria-label="Companies previously worked with"
+        className="border-t border-b border-border py-12"
+      >
+        <div className="flex flex-col items-center text-center gap-1 mb-8">
+          <h2 className="text-sm font-semibold text-muted uppercase tracking-widest">
+            Previously worked with
+          </h2>
+          <p className="text-sm text-faint">
+            Experience across startups, growth-stage companies, and Amazon.
+          </p>
+        </div>
+        <ul className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+          {companies.map((company) => (
+            <li key={company}>
+              <span
+                title={company}
+                className="block text-lg sm:text-xl font-semibold tracking-tight text-muted opacity-70 hover:opacity-100 hover:text-foreground transition-all duration-200 select-none"
+              >
+                {company}
+              </span>
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* Projects */}
