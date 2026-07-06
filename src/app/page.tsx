@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-const companies = ["Amazon", "Mardamed", "Yuanfudao", "T.I.M.E", "Zuri Productions"];
+const companies = ["Amazon", "Yuanfudao", "T.I.M.E", "Mardamed", "Zuri Productions"];
 
 const expertise = [
   {
