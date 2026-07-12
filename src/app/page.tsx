@@ -77,8 +77,7 @@ export default function Home() {
             </h1>
 
             <p className="max-w-xl font-serif italic text-lg sm:text-xl font-semibold text-foreground text-balance">
-              Turning <span className="text-accent-text">9 years of 0-to-1 experience</span> into
-              technical PM craft.
+              Building products from zero to scale.
             </p>
 
             <p className="max-w-xl text-base text-muted leading-relaxed text-balance">
