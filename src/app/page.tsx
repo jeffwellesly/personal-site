@@ -5,6 +5,7 @@ import { projects } from "@/lib/projects";
 import { getAllPosts } from "@/lib/posts";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
+import StoryTimeline from "@/components/StoryTimeline";
 import { LinkedInIcon, GitHubIcon, ResumeIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
@@ -31,21 +32,6 @@ const coreStrengths = [
   "Systems & Data Thinking",
   "0-to-1 Product Building",
   "Cross-Functional Execution",
-];
-
-const expertise = [
-  {
-    title: "0-to-1 Product Strategy",
-    body: "Taking products from idea to scale — defining the vision, validating fast, and building for growth.",
-  },
-  {
-    title: "GenAI & LLM",
-    body: "Building AI-powered product features that create real user value, not just technical demos.",
-  },
-  {
-    title: "Growth & Strategy",
-    body: "Driving measurable revenue and user growth through rigorous prioritization and experimentation.",
-  },
 ];
 
 const recentPosts = getAllPosts().slice(0, 3);
@@ -172,42 +158,24 @@ export default function Home() {
 
       {/* 02 / STORY */}
       <section id="story" className={sectionClass}>
-        <Reveal className="max-w-2xl mx-auto flex flex-col gap-4 text-center lg:text-left">
+        <Reveal className="max-w-2xl mx-auto w-full flex flex-col gap-3 text-center lg:text-left">
           <h2 className="text-sm font-semibold text-muted uppercase tracking-widest">
             Story
           </h2>
           <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
-            Nine years, two very different environments
+            From founding teams to Amazon product strategy.
           </h3>
           <p className="text-base text-muted leading-relaxed">
-            I started in product working with early-stage and founding teams, building 0-to-1
-            products in edtech. The clearest example: scaling a K-12 live learning platform from
-            0 to 6M+ users, work that contributed to $100M+ in revenue impact.
+            I&apos;ve spent 9 years building products from early-stage ambiguity to scaled
+            adoption, across edtech, healthtech, AI, and cross-border commerce.
           </p>
-          <p className="text-base text-muted leading-relaxed">
-            Today I&apos;m at Amazon, driving product strategy for Cross Border business — a
-            different kind of problem, where the work is less about speed and more about
-            stakeholder alignment, operational complexity, and long-term systems thinking across
-            a global operation.
-          </p>
-          <p className="text-base text-muted leading-relaxed">
-            In between, I did my MBA at the University of Washington&apos;s Foster School of
-            Business with an AI specialization — where I formalized a lot of what I&apos;d
-            learned by instinct in the startup years, and picked up the AI/ML grounding I now
-            build on with Ship It.
+          <p className="text-xs font-semibold uppercase tracking-widest text-faint mt-1">
+            Click any role to see the work
           </p>
         </Reveal>
 
-        <Reveal className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto w-full">
-          {expertise.map(({ title, body }) => (
-            <div
-              key={title}
-              className="rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow"
-            >
-              <h3 className="font-semibold text-foreground mb-2">{title}</h3>
-              <p className="text-sm text-muted">{body}</p>
-            </div>
-          ))}
+        <Reveal className="max-w-3xl mx-auto w-full">
+          <StoryTimeline />
         </Reveal>
       </section>
 
