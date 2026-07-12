@@ -20,11 +20,11 @@ export const metadata: Metadata = {
 
 const companies = ["Amazon", "Yuanfudao", "T.I.M.E", "Mardamed", "Zuri Productions"];
 
-const metrics = [
-  { value: "9 yrs", label: "0-to-1 product experience" },
-  { value: "6M+", label: "users reached" },
-  { value: "$100M+", label: "revenue impact" },
-  { value: "Amazon", label: "cross-border product strategy" },
+const statLine = [
+  { label: "experience", value: "9 yrs" },
+  { label: "users reached", value: "6M+" },
+  { label: "revenue impact", value: "$100M+" },
+  { label: "current", value: "Amazon" },
 ];
 
 const expertise = [
@@ -54,75 +54,78 @@ export default function Home() {
       <section id="index" className={sectionClass}>
         <Reveal className="flex flex-col-reverse lg:flex-row items-center gap-10">
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
+            <p className="text-sm text-muted">
+              <span className="text-faint">jeff@amazon:~$</span> whoami
+            </p>
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent-text text-balance">
               Jeff Wellesly
             </h1>
 
             <p className="max-w-xl text-lg sm:text-xl font-semibold text-foreground text-balance">
-              Product leader with 9 years of 0-to-1 startup experience, now driving product
-              strategy at Amazon.
+              Product leader turning{" "}
+              <span className="text-accent-text">9 years of 0-to-1 experience</span> into
+              technical PM craft.
             </p>
 
             <p className="max-w-xl text-base text-muted leading-relaxed text-balance">
-              I&apos;ve built and scaled products with early-stage teams, including a K-12 live
-              learning platform that reached 6M+ users and contributed to $100M+ in revenue
-              impact. Today, I work on Cross-Border Delivery Experience at Amazon.
+              Built and scaled products with early-stage teams, including a K-12 live learning
+              platform that reached 6M+ users and $100M+ in revenue impact. Currently driving
+              Cross-Border Delivery Experience at Amazon — and building in public.
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-              <Link
-                href="/#work"
-                className="px-6 py-3 rounded-lg bg-accent text-accent-fg font-semibold hover:bg-accent-hover transition-colors"
-              >
-                View Work
-              </Link>
               <a
-                href="https://shipit-jeff.vercel.app/"
+                href="https://github.com/jeffwellesly"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-lg border-2 border-accent text-accent-text font-semibold hover:bg-accent-subtle transition-colors"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-border bg-card text-sm text-foreground hover:border-accent transition-colors"
               >
-                Launch Ship It
+                <GitHubIcon />
+                <span className="text-faint">--github</span> /jeffwellesly
               </a>
-              <Link
-                href="/#contact"
-                className="px-6 py-3 rounded-lg border border-border text-foreground font-semibold hover:bg-surface transition-colors"
+              <a
+                href="https://www.linkedin.com/in/jeffwe/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-border bg-card text-sm text-foreground hover:border-accent transition-colors"
               >
-                Contact
-              </Link>
+                <LinkedInIcon />
+                <span className="text-faint">--linkedin</span> in/jeffwe
+              </a>
+              <span
+                title="Resume coming soon"
+                className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-border bg-card text-sm text-faint cursor-default select-none"
+              >
+                <ResumeIcon />
+                <span className="text-faint">--resume</span> soon
+              </span>
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-3 shrink-0">
-            <div className="relative w-40 h-40 sm:w-44 sm:h-44 rounded-full overflow-hidden ring-2 ring-accent-subtle shadow-sm">
-              <Image
-                src="/profile.jpg"
-                alt="Jeff Wellesly"
-                fill
-                sizes="176px"
-                quality={90}
-                className="object-cover object-[center_20%]"
-                priority
-              />
-            </div>
-            <div className="rounded-lg border border-border bg-card px-4 py-2.5 text-center shadow-sm">
-              <p className="text-xs text-muted">Current focus</p>
-              <p className="text-sm font-semibold text-foreground mt-0.5">
-                Cross-Border Delivery Experience at Amazon
-              </p>
-            </div>
-          </div>
-        </Reveal>
-
-        {/* Metrics row */}
-        <Reveal className="w-full max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-border border-t border-b border-border">
-            {metrics.map(({ value, label }) => (
-              <div key={label} className="flex flex-col items-center text-center py-5 px-2">
-                <p className="text-2xl sm:text-3xl font-bold text-accent-text">{value}</p>
-                <p className="text-xs sm:text-sm text-muted mt-1">{label}</p>
+          <div className="flex flex-col items-center gap-3 shrink-0 w-full max-w-[220px]">
+            <div className="relative w-full aspect-square rounded-xl overflow-hidden border border-border bg-card p-2">
+              <div className="relative w-full h-full rounded-lg overflow-hidden">
+                <Image
+                  src="/profile.jpg"
+                  alt="Jeff Wellesly"
+                  fill
+                  sizes="220px"
+                  quality={90}
+                  className="object-cover object-[center_20%]"
+                  priority
+                />
               </div>
-            ))}
+            </div>
+
+            <div className="w-full text-sm border-t border-border pt-3">
+              {statLine.map(({ label, value }) => (
+                <div key={label} className="flex items-center justify-between py-1">
+                  <span className="text-muted">{label}</span>
+                  <span className="font-semibold text-accent-text">{value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </Reveal>
       </section>

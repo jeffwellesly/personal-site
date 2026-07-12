@@ -6,11 +6,11 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
-  { id: "index", href: "/#index", label: "HOME" },
-  { id: "story", href: "/#story", label: "STORY" },
-  { id: "work", href: "/#work", label: "WORK" },
-  { id: "blog", href: "/#blog", label: "BLOG" },
-  { id: "contact", href: "/#contact", label: "CONTACT" },
+  { id: "index", href: "/#index", label: "home" },
+  { id: "story", href: "/#story", label: "story" },
+  { id: "work", href: "/#work", label: "work" },
+  { id: "blog", href: "/#blog", label: "blog" },
+  { id: "contact", href: "/#contact", label: "contact" },
 ];
 
 export default function Header() {
