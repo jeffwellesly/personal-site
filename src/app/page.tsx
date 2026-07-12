@@ -52,8 +52,19 @@ export default function Home() {
     <div className="flex flex-col">
       {/* INDEX */}
       <section id="index" className={sectionClass}>
-        <Reveal className="flex flex-col-reverse lg:flex-row items-center gap-10">
-          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
+        <Reveal className="grid grid-cols-1 lg:grid-cols-[0.6fr_1fr_0.72fr] gap-10 lg:gap-12 items-start">
+          {/* Credentials sidebar */}
+          <div className="order-3 lg:order-1 flex flex-col gap-4 border-t border-border pt-4 max-w-xs mx-auto lg:mx-0 w-full">
+            {statLine.map(({ label, value }) => (
+              <div key={label}>
+                <p className="text-2xl font-bold text-foreground">{value}</p>
+                <p className="text-xs text-muted mt-0.5">{label}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Main content */}
+          <div className="order-1 lg:order-2 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent-text text-balance">
               Jeff Wellesly
             </h1>
@@ -70,7 +81,7 @@ export default function Home() {
               Cross-Border Delivery Experience at Amazon — and building in public.
             </p>
 
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5 border-t border-border pt-4 mt-2 w-full justify-center lg:justify-start">
               <a
                 href="https://www.linkedin.com/in/jeffwe/"
                 target="_blank"
@@ -106,8 +117,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-3 shrink-0 w-full max-w-[220px]">
-            <div className="relative w-full aspect-square rounded-xl overflow-hidden border border-border bg-card p-2">
+          {/* Photo */}
+          <div className="order-2 lg:order-3 flex justify-center lg:justify-end w-full">
+            <div className="relative w-full max-w-[220px] aspect-[3/4] rounded-xl overflow-hidden border border-border bg-card p-2">
               <div className="relative w-full h-full rounded-lg overflow-hidden">
                 <Image
                   src="/profile.jpg"
@@ -119,15 +131,6 @@ export default function Home() {
                   priority
                 />
               </div>
-            </div>
-
-            <div className="w-full text-sm border-t border-border pt-3">
-              {statLine.map(({ label, value }) => (
-                <div key={label} className="flex items-center justify-between py-1">
-                  <span className="text-muted">{label}</span>
-                  <span className="font-semibold text-accent-text">{value}</span>
-                </div>
-              ))}
             </div>
           </div>
         </Reveal>
