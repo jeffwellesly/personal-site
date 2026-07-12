@@ -78,18 +78,16 @@ export default function Home() {
               Jeff Wellesly
             </h1>
 
-            <p className="max-w-xl font-serif italic text-lg sm:text-xl font-semibold text-foreground text-balance">
-              I build and scale products from early-stage ideas to real customer adoption.
-            </p>
-
             <p className="max-w-xl text-base text-muted leading-relaxed text-balance">
-              I&apos;m a Product Manager with 9 years of experience building 0-to-1 products
-              across startups and big tech. I designed India&apos;s market-entry product strategy
-              for Yuanfudao, a $15.5B EdTech company, helping its K-12 live learning platform
-              reach 6M+ users. I also consulted with Mardamed during its seed-stage fundraising
-              and launch strategy, and worked with Zuri Productions to explore new product
-              opportunities. At Amazon, I now work on Cross-Border Delivery Experience, using
-              demand forecasting to help sellers get products to customers faster.
+              I&apos;ve spent 9 years building products, as a founding team member at early-stage
+              startups, as a consultant helping seed-stage companies find their footing, and now
+              in big tech at Amazon, where I work on Cross-Border Delivery Experience. Along the
+              way I helped Yuanfudao&apos;s K-12 learning platform scale to 6M+ users in India,
+              and advised startups like Mardamed and Zuri Productions through their early
+              fundraising and product decisions. I hold an MBA with an AI specialization from the
+              University of Washington&apos;s Foster School of Business, and I&apos;m an avid
+              reader of technology, economics, and productivity/growth books, always looking for
+              the next idea worth testing.
             </p>
 
             <div className="flex items-center gap-5 border-t border-border pt-4 mt-2 w-full justify-center lg:justify-start">
