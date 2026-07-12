@@ -127,36 +127,29 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col items-center lg:items-end gap-2.5 w-full max-w-[220px] border-t border-border pt-4">
+            <div className="flex items-center justify-center lg:justify-end gap-3 w-full max-w-[220px] border-t border-border pt-4">
               <a
                 href="https://www.linkedin.com/in/jeffwe/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="flex items-center gap-2 text-sm font-medium text-muted hover:text-accent-text transition-colors"
+                className="text-muted hover:text-accent-text transition-colors"
               >
                 <LinkedInIcon />
-                LinkedIn
               </a>
+              <span className="text-border select-none">·</span>
               <a
                 href="https://github.com/jeffwellesly"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="flex items-center gap-2 text-sm font-medium text-muted hover:text-accent-text transition-colors"
+                className="text-muted hover:text-accent-text transition-colors"
               >
                 <GitHubIcon />
-                GitHub
               </a>
-              <span
-                title="Resume coming soon"
-                className="flex items-center gap-2 text-sm font-medium text-faint cursor-default select-none"
-              >
+              <span className="text-border select-none">·</span>
+              <span title="Resume coming soon" className="text-faint cursor-default">
                 <ResumeIcon />
-                Resume
-                <span className="text-xs bg-accent-subtle text-accent-text px-1.5 py-0.5 rounded-full">
-                  soon
-                </span>
               </span>
             </div>
           </div>
