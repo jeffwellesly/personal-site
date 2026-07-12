@@ -116,7 +116,7 @@ export default function Home() {
           </div>
 
           {/* Photo */}
-          <div className="order-2 lg:order-3 flex flex-col items-center lg:items-end gap-4 w-full">
+          <div className="order-2 lg:order-3 flex flex-col items-center gap-4 w-full">
             <div className="relative w-full max-w-[220px] aspect-[3/4] rounded-xl overflow-hidden border border-border bg-card p-2">
               <div className="relative w-full h-full rounded-lg overflow-hidden">
                 <Image
@@ -131,7 +131,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center gap-3 w-full max-w-[220px] border-t border-border pt-4 mx-auto">
+            <div className="flex items-center justify-center flex-wrap gap-3 border-t border-border pt-4">
               <a
                 href="https://www.linkedin.com/in/jeffwe/"
                 target="_blank"
