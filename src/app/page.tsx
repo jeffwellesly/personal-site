@@ -60,7 +60,7 @@ export default function Home() {
       <section id="index" className={sectionClass}>
         <Reveal className="grid grid-cols-1 lg:grid-cols-[0.55fr_1.05fr_0.65fr] gap-10 lg:gap-11 items-start">
           {/* Where I add value sidebar */}
-          <div className="order-3 lg:order-1 lg:mt-14 flex flex-col border-t border-foreground pt-4 max-w-xs mx-auto lg:mx-0 w-full">
+          <div className="order-3 lg:order-1 lg:mt-[72px] flex flex-col max-w-xs mx-auto lg:mx-0 w-full">
             <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-2">
               Where I add value
             </p>
