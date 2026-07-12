@@ -50,7 +50,7 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 font-bold text-xl text-foreground hover:text-accent-text transition-colors"
+            className="flex items-center gap-2 font-serif font-bold text-xl text-foreground hover:text-accent-text transition-colors"
           >
             <span className="inline-flex w-8 h-8 rounded-lg bg-accent text-accent-fg items-center justify-center text-xs font-black">
               JW

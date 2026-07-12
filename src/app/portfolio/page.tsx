@@ -11,7 +11,7 @@ export default function Portfolio() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h1 className="text-3xl font-bold text-foreground">Portfolio</h1>
+        <h1 className="font-serif text-3xl font-bold text-foreground">Portfolio</h1>
         <p className="mt-2 text-muted">
           Products I&apos;m building — applying the same 0-to-1 thinking I use professionally.
         </p>
@@ -26,7 +26,7 @@ export default function Portfolio() {
           const cardContent = (
             <>
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
-                <h2 className="text-2xl font-bold text-foreground">{p.name}</h2>
+                <h2 className="font-serif text-2xl font-bold text-foreground">{p.name}</h2>
                 <span className="self-start shrink-0 text-xs font-medium bg-accent-subtle text-accent-text px-3 py-1 rounded-full">
                   {p.status}
                 </span>

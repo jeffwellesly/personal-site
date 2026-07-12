@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Light theme (default) ── */
+/* ── Light theme (default) — editorial ── */
 :root {
-  --bg:            #ffffff;
-  --bg-subtle:     #f9fafb;
-  --bg-card:       #ffffff;
-  --line:          #e5e7eb;
-  --text:          #111827;
-  --text-muted:    #6b7280;
-  --text-faint:    #9ca3af;
-  --accent:        #4f46e5;
-  --accent-hover:  #4338ca;
-  --accent-fg:     #ffffff;
-  --accent-subtle: #eef2ff;
-  --accent-text:   #4f46e5;
+  --bg:            #F7F5EF;
+  --bg-subtle:     #EFECE0;
+  --bg-card:       #FFFFFF;
+  --line:          #DEDBD0;
+  --text:          #1C1B18;
+  --text-muted:    #54523E;
+  --text-faint:    #8A8776;
+  --accent:        #3F5D45;
+  --accent-hover:  #34503A;
+  --accent-fg:     #FFFFFF;
+  --accent-subtle: #E8ECE5;
+  --accent-text:   #3F5D45;
   --accent-2:      #d97706;
   --accent-3:      #0d9488;
 }
@@ -42,7 +42,7 @@
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), sans-serif;
 }
 
 /* Smooth color transitions on theme toggle — only color props so other
@@ -86,6 +86,7 @@ html[data-theme="dark"] code[data-theme*=" "] span {
 
 .prose :is(h1, h2, h3, h4) {
   color: var(--text);
+  font-family: var(--font-serif), serif;
   font-weight: 700;
   line-height: 1.3;
   margin-top: 2em;

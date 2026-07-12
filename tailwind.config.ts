@@ -26,6 +26,10 @@ const config: Config = {
         accent2: "var(--accent-2)",
         accent3: "var(--accent-3)",
       },
+      fontFamily: {
+        sans: ["var(--font-sans)", "sans-serif"],
+        serif: ["var(--font-serif)", "serif"],
+      },
     },
   },
   plugins: [],

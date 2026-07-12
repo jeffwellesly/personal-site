@@ -58,7 +58,7 @@ export default function PostPage({ params }: { params: { slug: string } }) {
             day: "numeric",
           })}
         </p>
-        <h1 className="text-4xl font-bold text-foreground leading-tight mb-4">
+        <h1 className="font-serif text-4xl font-bold text-foreground leading-tight mb-4">
           {post.title}
         </h1>
         <p className="text-lg text-muted mb-4">{post.description}</p>

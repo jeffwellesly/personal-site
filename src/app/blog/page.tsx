@@ -19,7 +19,7 @@ export default function Blog() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h1 className="text-3xl font-bold text-foreground">Blog</h1>
+        <h1 className="font-serif text-3xl font-bold text-foreground">Blog</h1>
         <p className="mt-2 text-muted">
           Writing on product management, technical fluency for PMs, AI/ML, and building Ship It.
         </p>
@@ -36,7 +36,7 @@ export default function Blog() {
                   day: "numeric",
                 })}
               </p>
-              <h2 className="text-lg font-semibold text-foreground mb-1 group-hover:text-accent-text transition-colors">
+              <h2 className="font-serif text-lg font-semibold text-foreground mb-1 group-hover:text-accent-text transition-colors">
                 {title}
               </h2>
               <p className="text-sm text-muted mb-3">{description}</p>

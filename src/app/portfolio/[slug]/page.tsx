@@ -44,7 +44,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
 
       <header className="mb-10">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
-          <h1 className="text-4xl font-bold text-foreground leading-tight">{project.name}</h1>
+          <h1 className="font-serif text-4xl font-bold text-foreground leading-tight">{project.name}</h1>
           <span className="self-start shrink-0 text-xs font-medium bg-accent-subtle text-accent-text px-3 py-1 rounded-full">
             {project.status}
           </span>

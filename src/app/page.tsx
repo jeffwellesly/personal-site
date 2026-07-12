@@ -65,11 +65,11 @@ export default function Home() {
 
           {/* Main content */}
           <div className="order-1 lg:order-2 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent-text text-balance">
+            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-accent-text text-balance">
               Jeff Wellesly
             </h1>
 
-            <p className="max-w-xl text-lg sm:text-xl font-semibold text-foreground text-balance">
+            <p className="max-w-xl font-serif italic text-lg sm:text-xl font-semibold text-foreground text-balance">
               Product leader turning{" "}
               <span className="text-accent-text">9 years of 0-to-1 experience</span> into
               technical PM craft.
@@ -171,7 +171,7 @@ export default function Home() {
           <h2 className="text-sm font-semibold text-muted uppercase tracking-widest">
             Story
           </h2>
-          <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
+          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
             Nine years, two very different environments
           </h3>
           <p className="text-base text-muted leading-relaxed">
@@ -210,7 +210,7 @@ export default function Home() {
       <section id="work" className={sectionClass}>
         <Reveal className="w-full">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-foreground">Work</h2>
+            <h2 className="font-serif text-2xl font-bold text-foreground">Work</h2>
             <Link
               href="/portfolio"
               className="text-sm text-accent-text hover:opacity-80 transition-opacity"
@@ -225,7 +225,7 @@ export default function Home() {
               const cardContent = (
                 <>
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="font-semibold text-foreground text-lg">{p.name}</h3>
+                    <h3 className="font-serif font-semibold text-foreground text-lg">{p.name}</h3>
                     <span className="shrink-0 text-xs font-medium bg-accent-subtle text-accent-text px-2 py-1 rounded-full">
                       {p.status}
                     </span>
@@ -268,7 +268,7 @@ export default function Home() {
       <section id="blog" className={sectionClass}>
         <Reveal className="w-full max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-foreground">Blog</h2>
+            <h2 className="font-serif text-2xl font-bold text-foreground">Blog</h2>
             <Link
               href="/blog"
               className="text-sm text-accent-text hover:opacity-80 transition-opacity"
@@ -312,7 +312,7 @@ export default function Home() {
       <section id="contact" className={sectionClass}>
         <Reveal className="max-w-lg w-full mx-auto flex flex-col gap-6">
           <div>
-            <h2 className="text-2xl font-bold text-foreground">Contact</h2>
+            <h2 className="font-serif text-2xl font-bold text-foreground">Contact</h2>
             <p className="mt-2 text-muted">
               Got a question or want to work together? Send me a message.
             </p>
