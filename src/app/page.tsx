@@ -176,7 +176,7 @@ export default function Home() {
       <section id="work" className={sectionClass}>
         <Reveal className="w-full">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="font-serif text-2xl font-bold text-foreground">Work</h2>
+            <h2 className="font-serif text-2xl font-bold text-foreground">Projects</h2>
             <Link
               href="/portfolio"
               className="text-sm text-accent-text hover:opacity-80 transition-opacity"
