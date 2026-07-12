@@ -81,9 +81,11 @@ export default function Home() {
             </p>
 
             <p className="max-w-xl text-base text-muted leading-relaxed text-balance">
-              Built and scaled products with early-stage teams, including a K-12 live learning
-              platform that reached 6M+ users and $100M+ in revenue impact. Currently driving
-              Cross-Border Delivery Experience at Amazon — and building in public.
+              Product Manager with 9 years of experience building 0-to-1 products across startups
+              and big tech. I&apos;ve led product strategy across edtech and healthtech,
+              including Yuanfudao&apos;s India market-entry for a K-12 live learning platform that
+              reached 6M+ users, and digital product strategy for Mardamed. I&apos;m now driving
+              Cross-Border Delivery Experience at Amazon.
             </p>
 
             <div className="flex items-center gap-5 border-t border-border pt-4 mt-2 w-full justify-center lg:justify-start">
