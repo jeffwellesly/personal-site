@@ -54,10 +54,6 @@ export default function Home() {
       <section id="index" className={sectionClass}>
         <Reveal className="flex flex-col-reverse lg:flex-row items-center gap-10">
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
-            <p className="text-sm text-muted">
-              <span className="text-faint">jeff@amazon:~$</span> whoami
-            </p>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent-text text-balance">
               Jeff Wellesly
             </h1>
@@ -74,31 +70,38 @@ export default function Home() {
               Cross-Border Delivery Experience at Amazon — and building in public.
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
-              <a
-                href="https://github.com/jeffwellesly"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-border bg-card text-sm text-foreground hover:border-accent transition-colors"
-              >
-                <GitHubIcon />
-                <span className="text-faint">--github</span> /jeffwellesly
-              </a>
+            <div className="flex items-center gap-5">
               <a
                 href="https://www.linkedin.com/in/jeffwe/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-border bg-card text-sm text-foreground hover:border-accent transition-colors"
+                aria-label="LinkedIn"
+                className="flex items-center gap-2 text-sm font-medium text-muted hover:text-accent-text transition-colors"
               >
                 <LinkedInIcon />
-                <span className="text-faint">--linkedin</span> in/jeffwe
+                LinkedIn
               </a>
+              <span className="text-border select-none">·</span>
+              <a
+                href="https://github.com/jeffwellesly"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="flex items-center gap-2 text-sm font-medium text-muted hover:text-accent-text transition-colors"
+              >
+                <GitHubIcon />
+                GitHub
+              </a>
+              <span className="text-border select-none">·</span>
               <span
                 title="Resume coming soon"
-                className="flex items-center gap-2 px-4 py-2.5 rounded-lg border border-border bg-card text-sm text-faint cursor-default select-none"
+                className="flex items-center gap-2 text-sm font-medium text-faint cursor-default select-none"
               >
                 <ResumeIcon />
-                <span className="text-faint">--resume</span> soon
+                Resume
+                <span className="text-xs bg-accent-subtle text-accent-text px-1.5 py-0.5 rounded-full">
+                  soon
+                </span>
               </span>
             </div>
           </div>
