@@ -77,15 +77,17 @@ export default function Home() {
             </h1>
 
             <p className="max-w-xl font-serif italic text-lg sm:text-xl font-semibold text-foreground text-balance">
-              Building products from zero to scale.
+              I build and scale products from early-stage ideas to real customer adoption.
             </p>
 
             <p className="max-w-xl text-base text-muted leading-relaxed text-balance">
-              Product Manager with 9 years of experience building 0-to-1 products across startups
-              and big tech. I&apos;ve led product strategy across edtech and healthtech,
-              including Yuanfudao&apos;s India market-entry for a K-12 live learning platform that
-              reached 6M+ users, and digital product strategy for Mardamed. I&apos;m now driving
-              Cross-Border Delivery Experience at Amazon.
+              I&apos;m a Product Manager with 9 years of experience building 0-to-1 products
+              across startups and big tech. I designed India&apos;s market-entry product strategy
+              for Yuanfudao, a $15.5B EdTech company, helping its K-12 live learning platform
+              reach 6M+ users. I also consulted with Mardamed during its seed-stage fundraising
+              and launch strategy, and worked with Zuri Productions to explore new product
+              opportunities. At Amazon, I now work on Cross-Border Delivery Experience, using
+              demand forecasting to help sellers get products to customers faster.
             </p>
 
             <div className="flex items-center gap-5 border-t border-border pt-4 mt-2 w-full justify-center lg:justify-start">
