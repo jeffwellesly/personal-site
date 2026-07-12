@@ -21,10 +21,10 @@ export const metadata: Metadata = {
 const companies = ["Amazon", "Yuanfudao", "T.I.M.E", "Mardamed", "Zuri Productions"];
 
 const statLine = [
-  { label: "experience", value: "9 yrs" },
-  { label: "users reached", value: "6M+" },
-  { label: "revenue impact", value: "$100M+" },
-  { label: "current", value: "Amazon" },
+  { label: "Experience", value: "9 yrs" },
+  { label: "Users reached", value: "6M+" },
+  { label: "Revenue impact", value: "$100M+" },
+  { label: "Current", value: "Amazon" },
 ];
 
 const expertise = [
@@ -52,26 +52,32 @@ export default function Home() {
     <div className="flex flex-col">
       {/* INDEX */}
       <section id="index" className={sectionClass}>
-        <Reveal className="grid grid-cols-1 lg:grid-cols-[0.6fr_1fr_0.72fr] gap-10 lg:gap-12 items-start">
+        <Reveal className="grid grid-cols-1 lg:grid-cols-[0.55fr_1.05fr_0.65fr] gap-10 lg:gap-11 items-start">
           {/* Credentials sidebar */}
-          <div className="order-3 lg:order-1 flex flex-col gap-4 border-t border-border pt-4 max-w-xs mx-auto lg:mx-0 w-full">
-            {statLine.map(({ label, value }) => (
-              <div key={label}>
-                <p className="text-2xl font-bold text-foreground">{value}</p>
-                <p className="text-xs text-muted mt-0.5">{label}</p>
+          <div className="order-3 lg:order-1 flex flex-col gap-4 border-t border-foreground pt-4 max-w-xs mx-auto lg:mx-0 w-full">
+            {statLine.map(({ label, value }, i) => (
+              <div
+                key={label}
+                className={i < statLine.length - 1 ? "border-b border-border pb-4" : ""}
+              >
+                <p className="font-serif text-lg font-semibold text-foreground">{value}</p>
+                <p className="text-xs uppercase tracking-wide text-faint mt-0.5">{label}</p>
               </div>
             ))}
           </div>
 
           {/* Main content */}
           <div className="order-1 lg:order-2 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent-text">
+              Product leader, building technical craft
+            </p>
+
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-accent-text text-balance">
               Jeff Wellesly
             </h1>
 
             <p className="max-w-xl font-serif italic text-lg sm:text-xl font-semibold text-foreground text-balance">
-              Product leader turning{" "}
-              <span className="text-accent-text">9 years of 0-to-1 experience</span> into
+              Turning <span className="text-accent-text">9 years of 0-to-1 experience</span> into
               technical PM craft.
             </p>
 
