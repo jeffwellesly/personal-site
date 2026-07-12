@@ -81,49 +81,15 @@ export default function Home() {
             <p className="max-w-xl text-base text-muted leading-relaxed text-balance">
               I&apos;ve spent 9 years building products, as a founding team member at early-stage
               startups, as a consultant helping seed-stage companies find their footing, and now
-              in big tech at Amazon, where I work on Cross-Border Delivery Experience. I hold an
-              MBA with an AI specialization from the University of Washington&apos;s Foster
-              School of Business, and I&apos;m an avid reader of technology, economics, and
-              productivity/growth books, always looking for the next idea worth testing.
+              in big tech at Amazon, where I drive the product strategy for Cross-Border Delivery
+              Experience team. I hold an MBA with an AI specialization from the University of
+              Washington&apos;s Foster School of Business, and I&apos;m an avid reader of
+              technology, economics, and productivity/growth books, always looking for the next
+              idea worth testing.
             </p>
 
-            <div className="flex items-center gap-5 border-t border-border pt-4 mt-2 w-full justify-center lg:justify-start">
-              <a
-                href="https://www.linkedin.com/in/jeffwe/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="flex items-center gap-2 text-sm font-medium text-muted hover:text-accent-text transition-colors"
-              >
-                <LinkedInIcon />
-                LinkedIn
-              </a>
-              <span className="text-border select-none">·</span>
-              <a
-                href="https://github.com/jeffwellesly"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="flex items-center gap-2 text-sm font-medium text-muted hover:text-accent-text transition-colors"
-              >
-                <GitHubIcon />
-                GitHub
-              </a>
-              <span className="text-border select-none">·</span>
-              <span
-                title="Resume coming soon"
-                className="flex items-center gap-2 text-sm font-medium text-faint cursor-default select-none"
-              >
-                <ResumeIcon />
-                Resume
-                <span className="text-xs bg-accent-subtle text-accent-text px-1.5 py-0.5 rounded-full">
-                  soon
-                </span>
-              </span>
-            </div>
-
             {/* Previously worked with */}
-            <div className="w-full">
+            <div className="w-full mt-2 pt-4 border-t border-border">
               <p className="text-xs font-semibold uppercase tracking-widest text-muted">
                 Previously worked with
               </p>
@@ -146,7 +112,7 @@ export default function Home() {
           </div>
 
           {/* Photo */}
-          <div className="order-2 lg:order-3 flex justify-center lg:justify-end w-full">
+          <div className="order-2 lg:order-3 flex flex-col items-center lg:items-end gap-4 w-full">
             <div className="relative w-full max-w-[220px] aspect-[3/4] rounded-xl overflow-hidden border border-border bg-card p-2">
               <div className="relative w-full h-full rounded-lg overflow-hidden">
                 <Image
@@ -159,6 +125,39 @@ export default function Home() {
                   priority
                 />
               </div>
+            </div>
+
+            <div className="flex flex-col items-center lg:items-end gap-2.5 w-full max-w-[220px] border-t border-border pt-4">
+              <a
+                href="https://www.linkedin.com/in/jeffwe/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex items-center gap-2 text-sm font-medium text-muted hover:text-accent-text transition-colors"
+              >
+                <LinkedInIcon />
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/jeffwellesly"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="flex items-center gap-2 text-sm font-medium text-muted hover:text-accent-text transition-colors"
+              >
+                <GitHubIcon />
+                GitHub
+              </a>
+              <span
+                title="Resume coming soon"
+                className="flex items-center gap-2 text-sm font-medium text-faint cursor-default select-none"
+              >
+                <ResumeIcon />
+                Resume
+                <span className="text-xs bg-accent-subtle text-accent-text px-1.5 py-0.5 rounded-full">
+                  soon
+                </span>
+              </span>
             </div>
           </div>
         </Reveal>
