@@ -20,10 +20,11 @@ export const metadata: Metadata = {
 
 const companies = ["Amazon", "Yuanfudao", "T.I.M.E", "Mardamed", "Zuri Productions"];
 
-const stats = [
-  { label: "PM", value: "9 YRS", border: "border-t-accent" },
-  { label: "USERS", value: "6M+", border: "border-t-accent2" },
-  { label: "REVENUE", value: "$100M+", border: "border-t-accent3" },
+const metrics = [
+  { value: "9 yrs", label: "0-to-1 product experience" },
+  { value: "6M+", label: "users reached" },
+  { value: "$100M+", label: "revenue impact" },
+  { value: "Amazon", label: "cross-border product strategy" },
 ];
 
 const expertise = [
@@ -49,122 +50,84 @@ const sectionClass =
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* 01 / INDEX */}
+      {/* INDEX */}
       <section id="index" className={sectionClass}>
         <Reveal className="flex flex-col-reverse lg:flex-row items-center gap-10">
-          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-4">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-accent-text">
-              <span aria-hidden>■</span> 0-to-1 product builder since 2017
+          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-accent-text bg-accent-subtle px-3 py-1.5 rounded-full">
+              0-to-1 Product Builder • Amazon • UW Foster MBA
             </span>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent-text text-balance">
               Jeff Wellesly
             </h1>
 
-            <p className="text-xl sm:text-2xl font-bold text-foreground text-balance">
-              Building products people actually use?
+            <p className="max-w-xl text-lg sm:text-xl font-semibold text-foreground text-balance">
+              Product leader with 9 years of 0-to-1 startup experience, now driving product
+              strategy at Amazon.
             </p>
 
-            <p className="text-lg italic text-muted">
-              That&apos;s the problem I like solving.
+            <p className="max-w-xl text-base text-muted leading-relaxed text-balance">
+              I&apos;ve built and scaled products with early-stage teams, including a K-12 live
+              learning platform that reached 6M+ users and contributed to $100M+ in revenue
+              impact. Today, I work on Cross-Border Delivery Experience at Amazon.
             </p>
 
-            <p className="max-w-xl text-base text-muted text-balance">
-              Experienced Product Manager with 9 years of 0-to-1 product experience
-              across startups and big tech. Currently at Amazon, owning product strategy for
-              Cross Border business. Previously scaled a K-12 live learning platform
-              from 0 to 6M+ users, driving $100M+ in revenue impact. MBA from the
-              UW&apos;s Foster School of Business with AI specialization.
-            </p>
-          </div>
-
-          <div className="relative w-56 h-56 shrink-0 rounded-full overflow-hidden ring-4 ring-accent-subtle shadow-md">
-            <Image
-              src="/profile.jpg"
-              alt="Jeff Wellesly"
-              fill
-              sizes="224px"
-              quality={90}
-              className="object-cover object-[center_20%]"
-              priority
-            />
-          </div>
-        </Reveal>
-
-        {/* Stat cards */}
-        <Reveal className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl w-full mx-auto">
-          {stats.map(({ label, value, border }) => (
-            <div
-              key={label}
-              className={`rounded-xl border border-border border-t-4 ${border} bg-card p-5 text-center shadow-sm`}
-            >
-              <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-1">
-                {label}
-              </p>
-              <p className="text-2xl font-bold text-foreground">{value}</p>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-2">
+              <Link
+                href="/#work"
+                className="px-6 py-3 rounded-lg bg-accent text-accent-fg font-semibold hover:bg-accent-hover transition-colors"
+              >
+                View Work
+              </Link>
+              <a
+                href="https://shipit-jeff.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-lg border-2 border-accent text-accent-text font-semibold hover:bg-accent-subtle transition-colors"
+              >
+                Launch Ship It
+              </a>
+              <Link
+                href="/#contact"
+                className="px-6 py-3 rounded-lg border border-border text-foreground font-semibold hover:bg-surface transition-colors"
+              >
+                Contact
+              </Link>
             </div>
-          ))}
-        </Reveal>
+          </div>
 
-        {/* Impact callout */}
-        <Reveal className="max-w-2xl w-full mx-auto">
-          <div className="rounded-xl border border-border border-t-4 border-t-accent bg-card p-6 shadow-sm text-center">
-            <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-2">
-              Impact
-            </p>
-            <p className="text-4xl font-bold text-foreground mb-2">$100M+</p>
-            <p className="text-sm text-muted">
-              Revenue impact from scaling a K-12 live learning platform to 6M+ users.
-            </p>
+          <div className="flex flex-col items-center gap-3 shrink-0">
+            <div className="relative w-40 h-40 sm:w-44 sm:h-44 rounded-full overflow-hidden ring-2 ring-accent-subtle shadow-sm">
+              <Image
+                src="/profile.jpg"
+                alt="Jeff Wellesly"
+                fill
+                sizes="176px"
+                quality={90}
+                className="object-cover object-[center_20%]"
+                priority
+              />
+            </div>
+            <div className="rounded-lg border border-border bg-card px-4 py-2.5 text-center shadow-sm">
+              <p className="text-xs text-muted">Current focus</p>
+              <p className="text-sm font-semibold text-foreground mt-0.5">
+                Cross-Border Delivery Experience at Amazon
+              </p>
+            </div>
           </div>
         </Reveal>
 
-        {/* CTA row */}
-        <Reveal className="flex flex-col items-center gap-4">
-          <div className="flex flex-wrap justify-center items-center gap-3">
-            <Link
-              href="/#contact"
-              className="px-6 py-3 rounded-lg bg-accent text-accent-fg font-semibold hover:bg-accent-hover transition-colors"
-            >
-              Contact Me
-            </Link>
-            <a
-              href="https://www.linkedin.com/in/jeffwe/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="flex items-center gap-2 px-5 py-3 rounded-lg border border-border text-foreground font-semibold hover:bg-surface transition-colors"
-            >
-              <LinkedInIcon />
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/jeffwellesly"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="flex items-center gap-2 px-5 py-3 rounded-lg border border-border text-foreground font-semibold hover:bg-surface transition-colors"
-            >
-              <GitHubIcon />
-              GitHub
-            </a>
-            <span
-              title="Resume coming soon"
-              className="flex items-center gap-2 px-5 py-3 rounded-lg border border-border text-faint font-semibold cursor-default select-none"
-            >
-              <ResumeIcon />
-              Resume
-              <span className="text-xs bg-accent-subtle text-accent-text px-1.5 py-0.5 rounded-full">
-                soon
-              </span>
-            </span>
+        {/* Metrics row */}
+        <Reveal className="w-full max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-border border-t border-b border-border">
+            {metrics.map(({ value, label }) => (
+              <div key={label} className="flex flex-col items-center text-center py-5 px-2">
+                <p className="text-2xl sm:text-3xl font-bold text-accent-text">{value}</p>
+                <p className="text-xs sm:text-sm text-muted mt-1">{label}</p>
+              </div>
+            ))}
           </div>
-          <Link
-            href="/#work"
-            className="text-sm text-muted hover:text-accent-text transition-colors"
-          >
-            ↓ See the work
-          </Link>
         </Reveal>
       </section>
 
