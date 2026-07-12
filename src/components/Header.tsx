@@ -6,7 +6,7 @@ import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
-  { id: "index", href: "/#index", label: "INDEX" },
+  { id: "index", href: "/#index", label: "HOME" },
   { id: "story", href: "/#story", label: "STORY" },
   { id: "work", href: "/#work", label: "WORK" },
   { id: "blog", href: "/#blog", label: "BLOG" },
