@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
 };
 
-// Runs synchronously before first paint — reads localStorage then falls back
-// to prefers-color-scheme so the correct theme is set before CSS is applied.
-const themeScript = `(function(){try{var s=localStorage.getItem('theme');document.documentElement.setAttribute('data-theme',s||'dark');}catch(_){}})();`;
+// Runs synchronously before first paint — applies a saved theme preference,
+// if any. Otherwise the :root (light) styles apply by default.
+const themeScript = `(function(){try{var s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s);}catch(_){}})();`;
 
 export default function RootLayout({
   children,
