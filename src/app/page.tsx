@@ -74,10 +74,6 @@ export default function Home() {
 
           {/* Main content */}
           <div className="order-1 lg:order-2 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
-            <p className="text-xs font-semibold uppercase tracking-widest text-accent-text">
-              Product leader, building technical craft
-            </p>
-
             <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-accent-text text-balance">
               Jeff Wellesly
             </h1>
