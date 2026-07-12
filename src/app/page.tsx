@@ -165,10 +165,6 @@ export default function Home() {
           <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
             From founding teams to Amazon product strategy.
           </h3>
-          <p className="text-base text-muted leading-relaxed">
-            I&apos;ve spent 9 years building products from early-stage ambiguity to scaled
-            adoption, across edtech, healthtech, AI, and cross-border commerce.
-          </p>
           <p className="text-xs font-semibold uppercase tracking-widest text-faint mt-1">
             Click any role to see the work
           </p>
