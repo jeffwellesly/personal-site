@@ -201,7 +201,7 @@ export default function Home() {
       <section id="story" className={sectionClass}>
         <Reveal className="max-w-2xl mx-auto flex flex-col gap-4 text-center lg:text-left">
           <h2 className="text-sm font-semibold text-muted uppercase tracking-widest">
-            02 / Story
+            Story
           </h2>
           <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
             Nine years, two very different environments
