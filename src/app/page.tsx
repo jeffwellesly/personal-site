@@ -81,13 +81,10 @@ export default function Home() {
             <p className="max-w-xl text-base text-muted leading-relaxed text-balance">
               I&apos;ve spent 9 years building products, as a founding team member at early-stage
               startups, as a consultant helping seed-stage companies find their footing, and now
-              in big tech at Amazon, where I work on Cross-Border Delivery Experience. Along the
-              way I helped Yuanfudao&apos;s K-12 learning platform scale to 6M+ users in India,
-              and advised startups like Mardamed and Zuri Productions through their early
-              fundraising and product decisions. I hold an MBA with an AI specialization from the
-              University of Washington&apos;s Foster School of Business, and I&apos;m an avid
-              reader of technology, economics, and productivity/growth books, always looking for
-              the next idea worth testing.
+              in big tech at Amazon, where I work on Cross-Border Delivery Experience. I hold an
+              MBA with an AI specialization from the University of Washington&apos;s Foster
+              School of Business, and I&apos;m an avid reader of technology, economics, and
+              productivity/growth books, always looking for the next idea worth testing.
             </p>
 
             <div className="flex items-center gap-5 border-t border-border pt-4 mt-2 w-full justify-center lg:justify-start">
