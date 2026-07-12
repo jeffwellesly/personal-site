@@ -19,11 +19,11 @@ export const metadata: Metadata = {
 };
 
 const companies = [
-  { name: "Amazon", logo: "/logos/amazon.jpg" },
-  { name: "Yuanfudao (Oda Class)", logo: "/logos/yuanfudao.jpg" },
-  { name: "T.I.M.E.", logo: "/logos/time.png" },
-  { name: "Mardamed", logo: "/logos/mardamed.png" },
-  { name: "Zuri Productions", logo: "/logos/zuri.jpg" },
+  { name: "Amazon", logo: "/logos/amazon.jpg", url: "https://www.amazon.com/" },
+  { name: "Yuanfudao (Oda Class)", logo: "/logos/yuanfudao.jpg", url: "https://www.odaclass.com/" },
+  { name: "T.I.M.E.", logo: "/logos/time.png", url: "https://www.time4education.com/" },
+  { name: "Mardamed", logo: "/logos/mardamed.png", url: "https://mardamed.com/" },
+  { name: "Zuri Productions", logo: "/logos/zuri.jpg", url: "https://zuriprod.com/" },
 ];
 
 const statLine = [
@@ -94,15 +94,22 @@ export default function Home() {
                 Companies worked with
               </p>
               <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-                {companies.map(({ name, logo }) => (
-                  <Image
+                {companies.map(({ name, logo, url }) => (
+                  <a
                     key={name}
-                    src={logo}
-                    alt={name}
-                    width={160}
-                    height={64}
-                    className="h-8 w-auto object-contain transition-all duration-200 hover:grayscale hover:opacity-50"
-                  />
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={name}
+                  >
+                    <Image
+                      src={logo}
+                      alt={name}
+                      width={160}
+                      height={64}
+                      className="h-8 w-auto object-contain transition-all duration-200 hover:grayscale hover:opacity-50"
+                    />
+                  </a>
                 ))}
               </div>
             </div>
