@@ -26,11 +26,11 @@ const companies = [
   { name: "Zuri Productions", logo: "/logos/zuri.jpg", url: "https://zuriprod.com/" },
 ];
 
-const statLine = [
-  { label: "Experience", value: "9 yrs" },
-  { label: "Users reached", value: "6M+" },
-  { label: "Revenue impact", value: "$100M+" },
-  { label: "Current", value: "Amazon" },
+const coreStrengths = [
+  "AI/ML Product Strategy",
+  "Systems & Data Thinking",
+  "0-to-1 Product Building",
+  "Cross-Functional Execution",
 ];
 
 const expertise = [
@@ -59,16 +59,20 @@ export default function Home() {
       {/* INDEX */}
       <section id="index" className={sectionClass}>
         <Reveal className="grid grid-cols-1 lg:grid-cols-[0.55fr_1.05fr_0.65fr] gap-10 lg:gap-11 items-start">
-          {/* Credentials sidebar */}
-          <div className="order-3 lg:order-1 flex flex-col gap-4 border-t border-foreground pt-4 max-w-xs mx-auto lg:mx-0 w-full">
-            {statLine.map(({ label, value }, i) => (
-              <div
-                key={label}
-                className={i < statLine.length - 1 ? "border-b border-border pb-4" : ""}
+          {/* Core strengths sidebar */}
+          <div className="order-3 lg:order-1 flex flex-col border-t border-foreground pt-4 max-w-xs mx-auto lg:mx-0 w-full">
+            <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-2">
+              Core strengths
+            </p>
+            {coreStrengths.map((item, i) => (
+              <p
+                key={item}
+                className={`font-serif text-base text-foreground py-3 ${
+                  i < coreStrengths.length - 1 ? "border-b border-border" : ""
+                }`}
               >
-                <p className="font-serif text-lg font-semibold text-foreground">{value}</p>
-                <p className="text-xs uppercase tracking-wide text-faint mt-0.5">{label}</p>
-              </div>
+                {item}
+              </p>
             ))}
           </div>
 
