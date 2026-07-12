@@ -165,9 +165,6 @@ export default function Home() {
           <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
             From founding teams to Amazon product strategy.
           </h3>
-          <p className="text-xs font-semibold uppercase tracking-widest text-faint mt-1">
-            Click any role to see the work
-          </p>
         </Reveal>
 
         <Reveal className="max-w-3xl mx-auto w-full">
