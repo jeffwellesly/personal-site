@@ -54,10 +54,6 @@ export default function Home() {
       <section id="index" className={sectionClass}>
         <Reveal className="flex flex-col-reverse lg:flex-row items-center gap-10">
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left gap-3">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-accent-text bg-accent-subtle px-3 py-1.5 rounded-full">
-              0-to-1 Product Builder • Amazon • UW Foster MBA
-            </span>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-accent-text text-balance">
               Jeff Wellesly
             </h1>
