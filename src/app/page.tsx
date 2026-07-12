@@ -88,15 +88,12 @@ export default function Home() {
               idea worth testing.
             </p>
 
-            {/* Previously worked with */}
-            <div className="w-full mt-2 pt-4 border-t border-border">
-              <p className="text-xs font-semibold uppercase tracking-widest text-muted">
-                Previously worked with
+            {/* Companies worked with */}
+            <div className="w-full mt-2 pt-4 border-t border-border text-center">
+              <p className="text-xs font-semibold uppercase tracking-widest text-muted mb-4">
+                Companies worked with
               </p>
-              <p className="text-xs text-faint mt-1 mb-4">
-                Experience across startups, growth-stage companies, and Amazon.
-              </p>
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-10 gap-y-4">
+              <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
                 {companies.map(({ name, logo }) => (
                   <Image
                     key={name}
@@ -104,7 +101,7 @@ export default function Home() {
                     alt={name}
                     width={160}
                     height={64}
-                    className="h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-200"
+                    className="h-8 w-auto object-contain transition-all duration-200 hover:grayscale hover:opacity-50"
                   />
                 ))}
               </div>
@@ -127,15 +124,16 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center lg:justify-end gap-3 w-full max-w-[220px] border-t border-border pt-4">
+            <div className="flex items-center justify-center gap-3 w-full max-w-[220px] border-t border-border pt-4 mx-auto">
               <a
                 href="https://www.linkedin.com/in/jeffwe/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-muted hover:text-accent-text transition-colors"
+                className="flex items-center gap-1.5 text-sm font-medium text-muted hover:text-accent-text transition-colors"
               >
                 <LinkedInIcon />
+                LinkedIn
               </a>
               <span className="text-border select-none">·</span>
               <a
@@ -143,13 +141,18 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="text-muted hover:text-accent-text transition-colors"
+                className="flex items-center gap-1.5 text-sm font-medium text-muted hover:text-accent-text transition-colors"
               >
                 <GitHubIcon />
+                GitHub
               </a>
               <span className="text-border select-none">·</span>
-              <span title="Resume coming soon" className="text-faint cursor-default">
+              <span
+                title="Resume coming soon"
+                className="flex items-center gap-1.5 text-sm font-medium text-faint cursor-default select-none"
+              >
                 <ResumeIcon />
+                Resume
               </span>
             </div>
           </div>
