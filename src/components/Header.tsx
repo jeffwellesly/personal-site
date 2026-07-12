@@ -1,18 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  { id: "index", href: "/#index", label: "01 / INDEX" },
+  { id: "story", href: "/#story", label: "02 / STORY" },
+  { id: "work", href: "/#work", label: "03 / WORK" },
+  { id: "blog", href: "/#blog", label: "04 / BLOG" },
+  { id: "contact", href: "/#contact", label: "05 / CONTACT" },
 ];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      setActiveId(null);
+      return;
+    }
+
+    const elements = navLinks
+      .map(({ id }) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveId(entry.target.id);
+        });
+      },
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border shadow-sm">
@@ -32,11 +61,15 @@ export default function Header() {
           {/* Desktop nav + toggle */}
           <div className="hidden sm:flex items-center gap-1">
             <nav className="flex items-center gap-1">
-              {navLinks.map(({ href, label }) => (
+              {navLinks.map(({ id, href, label }) => (
                 <Link
-                  key={href}
+                  key={id}
                   href={href}
-                  className="px-4 py-2 rounded-md text-sm font-medium text-muted hover:text-accent-text hover:bg-accent-subtle transition-colors"
+                  className={`px-3 py-2 rounded-md text-xs font-semibold tracking-wide transition-colors ${
+                    activeId === id
+                      ? "text-accent-text bg-accent-subtle"
+                      : "text-muted hover:text-accent-text hover:bg-accent-subtle"
+                  }`}
                 >
                   {label}
                 </Link>
@@ -75,12 +108,16 @@ export default function Header() {
       {isOpen && (
         <div className="sm:hidden border-t border-border bg-background">
           <nav className="flex flex-col px-4 py-3 gap-1">
-            {navLinks.map(({ href, label }) => (
+            {navLinks.map(({ id, href, label }) => (
               <Link
-                key={href}
+                key={id}
                 href={href}
                 onClick={() => setIsOpen(false)}
-                className="px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-accent-text hover:bg-accent-subtle transition-colors"
+                className={`px-3 py-2 rounded-md text-sm font-semibold tracking-wide transition-colors ${
+                  activeId === id
+                    ? "text-accent-text bg-accent-subtle"
+                    : "text-foreground hover:text-accent-text hover:bg-accent-subtle"
+                }`}
               >
                 {label}
               </Link>

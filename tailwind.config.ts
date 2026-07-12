@@ -23,6 +23,8 @@ const config: Config = {
           subtle:  "var(--accent-subtle)",
           text:    "var(--accent-text)",
         },
+        accent2: "var(--accent-2)",
+        accent3: "var(--accent-3)",
       },
     },
   },

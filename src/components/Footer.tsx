@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LinkedInIcon, GitHubIcon, ResumeIcon } from "./icons";
 
 export default function Footer() {
   return (
@@ -18,6 +19,30 @@ export default function Footer() {
               Contact
             </Link>
           </nav>
+
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/jeffwe/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-muted hover:text-accent-text transition-colors"
+            >
+              <LinkedInIcon />
+            </a>
+            <a
+              href="https://github.com/jeffwellesly"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="text-muted hover:text-accent-text transition-colors"
+            >
+              <GitHubIcon />
+            </a>
+            <span title="Resume coming soon" className="text-faint cursor-default">
+              <ResumeIcon />
+            </span>
+          </div>
 
           <p className="text-sm text-faint">
             &copy; {new Date().getFullYear()} Jeff Wellesly. All rights reserved.

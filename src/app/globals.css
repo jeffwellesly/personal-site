@@ -16,6 +16,8 @@
   --accent-fg:     #ffffff;
   --accent-subtle: #eef2ff;
   --accent-text:   #4f46e5;
+  --accent-2:      #d97706;
+  --accent-3:      #0d9488;
 }
 
 /* ── Dark theme ── */
@@ -32,6 +34,8 @@
   --accent-fg:     #ffffff;
   --accent-subtle: #1e1b4b;
   --accent-text:   #a5b4fc;
+  --accent-2:      #f59e0b;
+  --accent-3:      #2dd4bf;
 }
 
 /* ── Base styles ── */
