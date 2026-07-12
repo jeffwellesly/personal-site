@@ -18,7 +18,13 @@ export const metadata: Metadata = {
   },
 };
 
-const companies = ["Amazon", "Yuanfudao", "T.I.M.E", "Mardamed", "Zuri Productions"];
+const companies = [
+  { name: "Amazon", logo: "/logos/amazon.jpg" },
+  { name: "Yuanfudao (Oda Class)", logo: "/logos/yuanfudao.jpg" },
+  { name: "T.I.M.E.", logo: "/logos/time.png" },
+  { name: "Mardamed", logo: "/logos/mardamed.png" },
+  { name: "Zuri Productions", logo: "/logos/zuri.jpg" },
+];
 
 const statLine = [
   { label: "Experience", value: "9 yrs" },
@@ -124,6 +130,28 @@ export default function Home() {
                 </span>
               </span>
             </div>
+
+            {/* Previously worked with */}
+            <div className="w-full">
+              <p className="text-xs font-semibold uppercase tracking-widest text-muted">
+                Previously worked with
+              </p>
+              <p className="text-xs text-faint mt-1 mb-4">
+                Experience across startups, growth-stage companies, and Amazon.
+              </p>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-10 gap-y-4">
+                {companies.map(({ name, logo }) => (
+                  <Image
+                    key={name}
+                    src={logo}
+                    alt={name}
+                    width={160}
+                    height={64}
+                    className="h-8 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-200"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Photo */}
@@ -144,35 +172,6 @@ export default function Home() {
           </div>
         </Reveal>
       </section>
-
-      {/* Previously worked with */}
-      <Reveal>
-        <section
-          aria-label="Companies previously worked with"
-          className="border-t border-b border-border py-12"
-        >
-          <div className="flex flex-col items-center text-center gap-1 mb-8">
-            <h2 className="text-sm font-semibold text-muted uppercase tracking-widest">
-              Previously worked with
-            </h2>
-            <p className="text-sm text-faint">
-              Experience across startups, growth-stage companies, and Amazon.
-            </p>
-          </div>
-          <ul className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-            {companies.map((company) => (
-              <li key={company}>
-                <span
-                  title={company}
-                  className="block text-lg sm:text-xl font-semibold tracking-tight text-muted opacity-70 hover:opacity-100 hover:text-foreground transition-all duration-200 select-none"
-                >
-                  {company}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </Reveal>
 
       {/* 02 / STORY */}
       <section id="story" className={sectionClass}>
