@@ -82,6 +82,21 @@ const stack = [
   },
 ];
 
+const outsideWork = [
+  {
+    title: "Training",
+    body: "I hit the gym regularly. It gives structure to my week and helps me stay consistent when work gets intense.",
+  },
+  {
+    title: "Meditation",
+    body: "I practice meditation to slow down, reset, and stay clear-headed, especially when I'm working through ambiguous problems.",
+  },
+  {
+    title: "Teddy",
+    body: "I spend a lot of time with Teddy, my black Lab, who moved with me from India to the U.S. for my MBA. He's been part of every major transition in my life here.",
+  },
+];
+
 const sectionClass =
   "min-h-[85dvh] snap-start scroll-mt-24 flex flex-col justify-center gap-10 py-16";
 
@@ -390,7 +405,33 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* 06 / CONTACT */}
+      {/* 06 / OUTSIDE WORK */}
+      <section id="personal" className={sectionClass}>
+        <Reveal className="w-full max-w-2xl">
+          <h2 className="font-serif text-2xl font-bold text-foreground mb-3">Outside Work</h2>
+          <p className="text-base text-muted leading-relaxed mb-8">
+            The routines and people that keep me grounded.
+          </p>
+        </Reveal>
+
+        <Reveal className="w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {outsideWork.map(({ title, body }) => (
+              <div
+                key={title}
+                className="rounded-xl border border-border bg-card p-6 shadow-sm"
+              >
+                <h3 className="font-serif font-semibold text-foreground text-lg mb-2">
+                  {title}
+                </h3>
+                <p className="text-sm text-muted leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* 07 / CONTACT */}
       <section id="contact" className={sectionClass}>
         <Reveal className="max-w-lg w-full mx-auto flex flex-col gap-6">
           <div>
