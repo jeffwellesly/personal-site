@@ -59,7 +59,7 @@ const stack = [
     ],
   },
   {
-    title: "Product Strategy & Growth",
+    title: "Product Strategy",
     items: [
       "0-to-1 product strategy",
       "GTM and market entry",
@@ -357,11 +357,7 @@ export default function Home() {
       {/* 05 / STACK */}
       <section id="stack" className={sectionClass}>
         <Reveal className="w-full max-w-2xl">
-          <h2 className="font-serif text-2xl font-bold text-foreground mb-3">Stack</h2>
-          <p className="text-base text-muted leading-relaxed mb-8">
-            The tools, systems, and methods I use to move from product ambiguity to shipped
-            products.
-          </p>
+          <h2 className="font-serif text-2xl font-bold text-foreground mb-8">Stack</h2>
         </Reveal>
 
         <Reveal className="w-full">
