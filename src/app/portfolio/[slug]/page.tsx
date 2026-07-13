@@ -3,14 +3,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
 
+// "ship-it" has its own dedicated spec page at /portfolio/ship-it/page.tsx —
+// excluded here so the two routes don't both try to generate the same path.
 function getCaseStudy(slug: string) {
+  if (slug === "ship-it") return null;
   const project = projects.find((p) => p.slug === slug);
   if (!project || !project.problem) return null;
   return project;
 }
 
 export function generateStaticParams() {
-  return projects.filter((p) => p.problem).map((p) => ({ slug: p.slug }));
+  return projects.filter((p) => p.problem && p.slug !== "ship-it").map((p) => ({ slug: p.slug }));
 }
 
 export function generateMetadata({
