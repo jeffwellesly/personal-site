@@ -84,16 +84,22 @@ const stack = [
 
 const outsideWork = [
   {
-    title: "Training",
-    body: "I hit the gym regularly. It gives structure to my week and helps me stay consistent when work gets intense.",
+    title: "Training & Meditation",
+    body: "I train regularly and practice meditation to stay disciplined, reset, and think clearly, especially when life or work gets noisy.",
   },
   {
-    title: "Meditation",
-    body: "I practice meditation to slow down, reset, and stay clear-headed, especially when I'm working through ambiguous problems.",
+    title: "Long Drives",
+    body: "I love traveling to new places, especially through long road trips. Some favorites: a two-week road trip across New Zealand, Seattle to California along the Oregon Coast, and a New England autumn road trip.",
+  },
+  {
+    title: "Teaching",
+    body: "I teach advanced math topics like calculus, probability, and statistics through my YouTube channel, Teach Kerala. It is another way I stay connected to learning, explanation, and education.",
+    linkLabel: "Watch Teach Kerala",
+    link: "https://www.youtube.com/watch?v=Jh4v0-vS1To&t=6s",
   },
   {
     title: "Teddy",
-    body: "I spend a lot of time with Teddy, my black Lab, who moved with me from India to the U.S. for my MBA. He's been part of every major transition in my life here.",
+    body: "I spend a lot of time with Teddy, my black Lab. I brought him with me from India when I moved to the U.S. for my MBA, and he's been my constant companion through that transition.",
   },
 ];
 
@@ -410,13 +416,13 @@ export default function Home() {
         <Reveal className="w-full max-w-2xl">
           <h2 className="font-serif text-2xl font-bold text-foreground mb-3">Outside Work</h2>
           <p className="text-base text-muted leading-relaxed mb-8">
-            The routines and people that keep me grounded.
+            A few things that keep me grounded outside product work.
           </p>
         </Reveal>
 
         <Reveal className="w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {outsideWork.map(({ title, body }) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {outsideWork.map(({ title, body, linkLabel, link }) => (
               <div
                 key={title}
                 className="rounded-xl border border-border bg-card p-6 shadow-sm"
@@ -425,6 +431,16 @@ export default function Home() {
                   {title}
                 </h3>
                 <p className="text-sm text-muted leading-relaxed">{body}</p>
+                {link && (
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-3 text-sm text-accent-text hover:opacity-80 transition-opacity"
+                  >
+                    {linkLabel} →
+                  </a>
+                )}
               </div>
             ))}
           </div>
