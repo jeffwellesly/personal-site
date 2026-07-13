@@ -179,13 +179,34 @@ const techStack = [
 ];
 
 const successMetricsRows = [
-  ["Track start rate", "Measures whether users understand the value and begin learning"],
-  ["Lesson completion rate", "Measures content clarity and engagement"],
-  ["Project completion rate", "Measures whether users are moving from learning to building"],
-  ["Return rate", "Measures whether the product creates ongoing learning motivation"],
-  ["Shipped project count", "Measures the core value proposition: learning by shipping"],
+  [
+    "Track start rate",
+    "Users who start a track ÷ Users who land on Ship It",
+    "Measures whether users understand the value and begin learning",
+  ],
+  [
+    "Lesson completion rate",
+    "Lessons completed ÷ Lessons started",
+    "Measures content clarity and engagement",
+  ],
+  [
+    "Project completion rate",
+    "Projects completed ÷ Projects started",
+    "Measures whether users are moving from learning to building",
+  ],
+  [
+    "Return rate",
+    "Users who return for a second session ÷ Users who started a first session",
+    "Measures whether the product creates ongoing learning motivation",
+  ],
+  [
+    "Shipped project count",
+    "Total count of projects marked as shipped (raw count, not a rate)",
+    "Measures the core value proposition: learning by shipping",
+  ],
   [
     "Qualitative feedback from PM/MBA users",
+    "Not a numeric formula; collected via user interviews and surveys",
     "Measures whether the content is useful for the target audience",
   ],
 ];
@@ -484,7 +505,7 @@ export default function ShipItSpecPage() {
         </Section>
 
         <Section number="13" title="Success Metrics">
-          <Table headers={["Metric", "Why it matters"]} rows={successMetricsRows} />
+          <Table headers={["Metric", "Formula", "Why it matters"]} rows={successMetricsRows} />
         </Section>
 
         <Section number="14" title="Product Tradeoffs">
@@ -518,16 +539,6 @@ export default function ShipItSpecPage() {
               </div>
             ))}
           </div>
-        </Section>
-
-        <Section number="16" title="What This Demonstrates">
-          <p className="text-base text-muted leading-relaxed">
-            Ship It demonstrates my ability to identify a real user problem, define a product
-            strategy, structure a learning experience, understand technical systems, use
-            AI-assisted development tools, and ship a working product. For PMT roles, it shows
-            that I can bridge product thinking with software systems, AI/ML concepts, and
-            execution.
-          </p>
         </Section>
 
         <div className="border-t border-border pt-8">
