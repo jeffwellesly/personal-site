@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "PersonalSite — Your Name";
+export const alt = "Jeff Wellesly, Product Manager";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -10,7 +10,7 @@ export default function OgImage() {
     (
       <div
         style={{
-          background: "#f9fafb",
+          background: "#F7F5EF",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -34,33 +34,33 @@ export default function OgImage() {
               width: 72,
               height: 72,
               borderRadius: 14,
-              background: "#4f46e5",
+              background: "#3F5D45",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#ffffff",
-              fontSize: 36,
+              color: "#F7F5EF",
+              fontSize: 32,
               fontWeight: 900,
             }}
           >
-            P
+            JW
           </div>
-          <span style={{ fontSize: 44, fontWeight: 700, color: "#111827" }}>
-            PersonalSite
+          <span style={{ fontSize: 44, fontWeight: 700, color: "#1C1B18" }}>
+            Jeff Wellesly
           </span>
         </div>
         <p
           style={{
             fontSize: 24,
-            color: "#6b7280",
+            color: "#54523E",
             textAlign: "center",
             maxWidth: 700,
             lineHeight: 1.5,
             margin: 0,
           }}
         >
-          Personal site and blog by Your Name — web development, writing, and
-          open source.
+          Product Manager with 9 years of experience building 0-to-1 products
+          across startups and big tech.
         </p>
       </div>
     ),

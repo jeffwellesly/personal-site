@@ -13,7 +13,7 @@ export default function Portfolio() {
       <div>
         <h1 className="font-serif text-3xl font-bold text-foreground">Projects</h1>
         <p className="mt-2 text-muted">
-          Products I&apos;m building — applying the same 0-to-1 thinking I use professionally.
+          Products I&apos;m building, applying the same 0-to-1 thinking I use professionally.
         </p>
       </div>
 

@@ -9,11 +9,11 @@ import StoryTimeline from "@/components/StoryTimeline";
 import { LinkedInIcon, GitHubIcon, ResumeIcon } from "@/components/icons";
 
 export const metadata: Metadata = {
-  title: { absolute: "Jeff Wellesly — Product Manager" },
+  title: { absolute: "Jeff Wellesly, Product Manager" },
   description:
     "Product Manager with 9 years experience scaling 0-to-1 products across startups and big tech.",
   openGraph: {
-    title: "Jeff Wellesly — Product Manager",
+    title: "Jeff Wellesly, Product Manager",
     description:
       "Product Manager with 9 years experience scaling 0-to-1 products across startups and big tech.",
   },

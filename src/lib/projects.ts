@@ -17,7 +17,7 @@ export const projects: Project[] = [
     name: "Alpha Hunter",
     tagline: "Automatic stock analysis app that surfaces investment signals before the crowd catches on.",
     description:
-      "Alpha Hunter automates the tedious parts of stock research — scanning filings, earnings calls, and market data to surface actionable signals. The goal is to give individual investors the kind of systematic analysis that was previously only available to quant funds.",
+      "Alpha Hunter automates the tedious parts of stock research: scanning filings, earnings calls, and market data to surface actionable signals. The goal is to give individual investors the kind of systematic analysis that was previously only available to quant funds.",
     status: "Live Product",
     tags: ["Fintech", "AI/ML", "Stock Analysis", "Automation"],
     link: "https://alpha-hunter-jeff.vercel.app/",

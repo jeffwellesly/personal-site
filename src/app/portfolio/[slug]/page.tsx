@@ -21,7 +21,7 @@ export function generateMetadata({
   const project = getCaseStudy(params.slug);
   if (!project) return {};
   return {
-    title: `${project.name} — Case Study`,
+    title: `${project.name}: Case Study`,
     description: project.tagline,
   };
 }

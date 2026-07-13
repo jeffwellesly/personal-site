@@ -1,33 +1,33 @@
 ---
 title: What Product Managers Should Actually Understand About Software Systems
 date: "2026-07-02"
-description: PMs don't need to code — but not understanding APIs, databases, auth, and deployment shows up as bad scoping, weak prioritization, and lost trust with engineering.
+description: PMs don't need to code, but not understanding APIs, databases, auth, and deployment shows up as bad scoping, weak prioritization, and lost trust with engineering.
 tags: ["Product Management", "Technical Fluency", "APIs", "Career"]
 ---
 
-I don't think PMs need to code. I've worked with excellent PMs who've never written a line of production code in their life, and I've worked with PMs who can code and still make bad scoping decisions because they don't understand the system underneath their own product. The skill that actually matters isn't syntax — it's a working mental model of how the pieces of a software system fit together, and where the cost is hiding.
+I don't think PMs need to code. I've worked with excellent PMs who've never written a line of production code in their life, and I've worked with PMs who can code and still make bad scoping decisions because they don't understand the system underneath their own product. The skill that actually matters isn't syntax. It's a working mental model of how the pieces of a software system fit together, and where the cost is hiding.
 
 Here's the model I actually use, and think every PM should have some version of.
 
 ## APIs are contracts, not magic
 
-An API is just an agreed-upon way for two systems to ask each other for something and get a predictable answer back. Your product's frontend asks a backend API for a user's order history; the API returns it in a fixed shape. The reason this matters to a PM: every API is a contract, and contracts are expensive to change once other things depend on them. When you ask engineering to "just add one more field" to an existing API response, you're not asking for a small thing — you're asking every consumer of that contract to potentially handle a new case. Understanding this changes how you scope "small" requests.
+An API is just an agreed-upon way for two systems to ask each other for something and get a predictable answer back. Your product's frontend asks a backend API for a user's order history; the API returns it in a fixed shape. The reason this matters to a PM: every API is a contract, and contracts are expensive to change once other things depend on them. When you ask engineering to "just add one more field" to an existing API response, you're not asking for a small thing. You're asking every consumer of that contract to potentially handle a new case. Understanding this changes how you scope "small" requests.
 
 ## Frontend and backend are different jobs with different failure modes
 
-The frontend is what a user sees and touches — it fails in ways that are visible immediately: a broken button, a layout that doesn't work on mobile. The backend is where data lives, business logic runs, and things are computed — it fails in ways that are often invisible until they aren't: a query that's fine at 1,000 users and falls over at 100,000. A PM who only thinks about frontend polish will consistently underestimate backend risk, because backend problems don't show up in a demo. They show up in an incident.
+The frontend is what a user sees and touches, and it fails in ways that are visible immediately: a broken button, a layout that doesn't work on mobile. The backend is where data lives, business logic runs, and things are computed, and it fails in ways that are often invisible until they aren't: a query that's fine at 1,000 users and falls over at 100,000. A PM who only thinks about frontend polish will consistently underestimate backend risk, because backend problems don't show up in a demo. They show up in an incident.
 
 ## Databases are where your product's assumptions get concrete
 
-Every product decision about what data you collect, how it's structured, and how long you keep it eventually becomes a database schema. This is why "just add a field" requests that seem trivial in a spec can be expensive in practice — changing a schema that's already in production, with real data in it, is a different kind of work than designing a schema from scratch. Good PMs ask what the data model looks like before committing to a feature that assumes a particular shape of data.
+Every product decision about what data you collect, how it's structured, and how long you keep it eventually becomes a database schema. This is why "just add a field" requests that seem trivial in a spec can be expensive in practice: changing a schema that's already in production, with real data in it, is a different kind of work than designing a schema from scratch. Good PMs ask what the data model looks like before committing to a feature that assumes a particular shape of data.
 
 ## Auth is a tradeoff surface, not a checkbox
 
-"Add login" is never just adding login. Every authentication decision — email and password versus OAuth, how sessions are handled, what happens when a user is logged in on two devices — is a tradeoff between user friction, security, and engineering effort. PMs who treat auth as a solved, generic problem tend to be surprised by how much scope hides inside it.
+"Add login" is never just adding login. Every authentication decision (email and password versus OAuth, how sessions are handled, what happens when a user is logged in on two devices) is a tradeoff between user friction, security, and engineering effort. PMs who treat auth as a solved, generic problem tend to be surprised by how much scope hides inside it.
 
 ## Deployment and cloud infrastructure set your actual iteration speed
 
-How code gets from a developer's machine to a live product — deployment — and where that product actually runs — cloud infrastructure — determine how fast your team can ship and how much something costs to run at scale. A team with a slow, manual deployment process will always ship slower than the roadmap implies, no matter how good the roadmap is. If you don't understand this layer, you'll keep being confused about why "just a small change" takes days.
+How code gets from a developer's machine to a live product (deployment) and where that product actually runs (cloud infrastructure) determine how fast your team can ship and how much something costs to run at scale. A team with a slow, manual deployment process will always ship slower than the roadmap implies, no matter how good the roadmap is. If you don't understand this layer, you'll keep being confused about why "just a small change" takes days.
 
 ## Why this matters for prioritization, scoping, and working with engineering
 
@@ -38,4 +38,4 @@ None of this is about being able to build the system yourself. It's about being 
 - Push back on an estimate with an informed question instead of just "can we go faster"
 - Earn the kind of trust from engineering that comes from asking questions that show you understand the tradeoff, not just the deadline
 
-I built Ship It in part because I think this gap — not code literacy, but systems literacy — is the actual bottleneck for a lot of PMs who want to be better partners to their engineering teams. You don't need to be able to build the system. You need to understand it well enough to reason about it.
+I built Ship It in part because I think this gap, not code literacy, but systems literacy, is the actual bottleneck for a lot of PMs who want to be better partners to their engineering teams. You don't need to be able to build the system. You need to understand it well enough to reason about it.
