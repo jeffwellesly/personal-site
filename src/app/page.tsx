@@ -36,6 +36,52 @@ const coreStrengths = [
 
 const recentPosts = getAllPosts().slice(0, 3);
 
+const stack = [
+  {
+    title: "AI/ML Product Thinking",
+    items: [
+      "Prompt design",
+      "LLM evals & guardrails",
+      "RAG",
+      "Model evaluation",
+      "AI-assisted prototyping",
+    ],
+  },
+  {
+    title: "Software Systems",
+    items: [
+      "APIs",
+      "Databases",
+      "Authentication",
+      "Frontend / backend basics",
+      "System design",
+      "Supabase, Vercel, GitHub",
+    ],
+  },
+  {
+    title: "Product Strategy & Growth",
+    items: [
+      "0-to-1 product strategy",
+      "GTM and market entry",
+      "Funnel analysis",
+      "Pricing and monetization",
+      "A/B testing",
+      "Roadmap prioritization",
+    ],
+  },
+  {
+    title: "Execution & Analytics",
+    items: [
+      "SQL, Python, R",
+      "Tableau / Power BI",
+      "Jira, Figma",
+      "PRDs and user stories",
+      "Cross-functional execution",
+      "Metrics and KPI design",
+    ],
+  },
+];
+
 const sectionClass =
   "min-h-[85dvh] snap-start scroll-mt-24 flex flex-col justify-center gap-10 py-16";
 
@@ -308,7 +354,47 @@ export default function Home() {
         </Reveal>
       </section>
 
-      {/* 05 / CONTACT */}
+      {/* 05 / STACK */}
+      <section id="stack" className={sectionClass}>
+        <Reveal className="w-full max-w-2xl">
+          <h2 className="font-serif text-2xl font-bold text-foreground mb-3">Stack</h2>
+          <p className="text-base text-muted leading-relaxed mb-8">
+            The tools, systems, and methods I use to move from product ambiguity to shipped
+            products.
+          </p>
+        </Reveal>
+
+        <Reveal className="w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {stack.map(({ title, items }) => (
+              <div
+                key={title}
+                className="rounded-xl border border-border bg-card p-6 shadow-sm"
+              >
+                <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-accent-text mb-4">
+                  <span className="w-2 h-2 bg-accent shrink-0" aria-hidden />
+                  {title}
+                </p>
+                <ul className="flex flex-col">
+                  {items.map((item, i) => (
+                    <li
+                      key={item}
+                      className={
+                        "text-sm text-muted leading-relaxed py-2.5" +
+                        (i < items.length - 1 ? " border-b border-border" : "")
+                      }
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* 06 / CONTACT */}
       <section id="contact" className={sectionClass}>
         <Reveal className="max-w-lg w-full mx-auto flex flex-col gap-6">
           <div>
