@@ -266,36 +266,28 @@ export default function Home() {
 
       {/* 04 / BLOG */}
       <section id="blog" className={sectionClass}>
-        <Reveal className="w-full max-w-2xl mx-auto">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="font-serif text-2xl font-bold text-foreground">Blog</h2>
-            <Link
-              href="/blog"
-              className="text-sm text-accent-text hover:opacity-80 transition-opacity"
-            >
-              View all posts →
-            </Link>
-          </div>
-          <div className="flex flex-col gap-4">
+        <Reveal className="w-full">
+          <h2 className="font-serif text-2xl font-bold text-foreground mb-6">Blog</h2>
+          <div className="flex flex-col gap-6">
             {recentPosts.map(({ slug, title, date, description, tags }) => (
               <Link key={slug} href={`/blog/${slug}`} className="group block">
-                <article className="rounded-xl border border-border bg-card p-6 shadow-sm group-hover:shadow-md transition-shadow">
-                  <p className="text-xs text-faint mb-1">
+                <article className="rounded-xl border border-border bg-card p-8 shadow-sm group-hover:shadow-md transition-shadow">
+                  <p className="text-xs text-faint mb-2">
                     {new Date(date).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
                       day: "numeric",
                     })}
                   </p>
-                  <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-accent-text transition-colors">
+                  <h3 className="font-serif text-2xl font-bold text-foreground mb-3 group-hover:text-accent-text transition-colors">
                     {title}
                   </h3>
-                  <p className="text-sm text-muted mb-3">{description}</p>
+                  <p className="text-sm text-muted leading-relaxed mb-5">{description}</p>
                   <div className="flex flex-wrap gap-2">
                     {tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs bg-surface text-muted border border-border px-2 py-0.5 rounded-full"
+                        className="text-xs bg-surface text-muted border border-border px-2.5 py-1 rounded-full"
                       >
                         {tag}
                       </span>
@@ -304,6 +296,14 @@ export default function Home() {
                 </article>
               </Link>
             ))}
+          </div>
+          <div className="mt-6">
+            <Link
+              href="/blog"
+              className="text-sm text-accent-text hover:opacity-80 transition-opacity"
+            >
+              View all posts →
+            </Link>
           </div>
         </Reveal>
       </section>
