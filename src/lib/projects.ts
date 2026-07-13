@@ -13,22 +13,12 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "alpha-hunter",
-    name: "Alpha Hunter",
-    tagline: "Automatic stock analysis app that surfaces investment signals before the crowd catches on.",
-    description:
-      "Alpha Hunter automates the tedious parts of stock research: scanning filings, earnings calls, and market data to surface actionable signals. The goal is to give individual investors the kind of systematic analysis that was previously only available to quant funds.",
-    status: "Live Product",
-    tags: ["Fintech", "AI/ML", "Stock Analysis", "Automation"],
-    link: "https://alpha-hunter-jeff.vercel.app/",
-  },
-  {
     slug: "ship-it",
     name: "Ship It",
     tagline:
-      "A gamified learning platform that helps non-technical builders learn software development and AI/ML by shipping real projects step by step.",
+      "A hands-on learning platform that helps PMs, founders, and non-technical builders learn software development and AI/ML by building real products.",
     description:
-      "Ship It is a learning app for PMs, founders, and non-technical builders who want to become technically fluent without going through a full engineering bootcamp. The product turns software development and AI/ML learning into structured tracks, simple lessons, and hands-on projects. Learners can pick a track, understand the concept in plain language, and build something real using tools like Claude Code, GitHub, Supabase, and Vercel.",
+      "I built Ship It after going through my own technical upskilling journey as a product manager. While preparing for technical product roles, I learned how modern software systems are built: APIs, databases, authentication, deployment, cloud tools, system design, and AI/ML workflows. I noticed that most resources for non-technical PMs were either too shallow to be useful or too engineering-heavy to be practical. Ship It turns those learning notes into a structured product experience. Learners move through simple lessons, progressive challenges, and hands-on projects using tools like Claude Code, GitHub, Supabase, Vercel, and AI/ML workflows. The goal is to help PMs and builders develop real technical intuition, not just memorize buzzwords.",
     status: "Live Product",
     tags: [
       "EdTech",
@@ -40,10 +30,20 @@ export const projects: Project[] = [
     ],
     link: "https://shipit-jeff.vercel.app/",
     problem:
-      "Most technical learning resources for non-engineers are either too shallow, like glossaries, or too deep, like engineering bootcamps. Ship It sits in the middle: practical, structured, project-based learning for people who need to understand how modern software and AI products are built.",
+      "To help product managers, MBA students, founders, and career switchers become technically fluent enough to work better with engineering teams, evaluate AI/ML product opportunities, and build real prototypes.",
     targetUsers:
       "Product managers, founders, MBA students, career switchers, and non-technical builders.",
     myRole:
-      "Product strategy, curriculum design, UX structure, content design, prototyping, and full product build.",
+      "Product strategy, technical fluency, AI/ML understanding, curriculum design, UX thinking, and the ability to ship a working product from scratch.",
+  },
+  {
+    slug: "alpha-hunter",
+    name: "Alpha Hunter",
+    tagline: "Automatic stock analysis app that surfaces investment signals before the crowd catches on.",
+    description:
+      "Alpha Hunter automates the tedious parts of stock research: scanning filings, earnings calls, and market data to surface actionable signals. The goal is to give individual investors the kind of systematic analysis that was previously only available to quant funds.",
+    status: "Live Product",
+    tags: ["Fintech", "AI/ML", "Stock Analysis", "Automation"],
+    link: "https://alpha-hunter-jeff.vercel.app/",
   },
 ];
