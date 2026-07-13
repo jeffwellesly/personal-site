@@ -175,40 +175,74 @@ export default function Home() {
       {/* 03 / WORK */}
       <section id="work" className={sectionClass}>
         <Reveal className="w-full">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="font-serif text-2xl font-bold text-foreground">Projects</h2>
-            <Link
-              href="/portfolio"
-              className="text-sm text-accent-text hover:opacity-80 transition-opacity"
-            >
-              View all →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <h2 className="font-serif text-2xl font-bold text-foreground mb-6">Projects</h2>
+          <div className="flex flex-col gap-6">
             {projects.map((p) => {
+              const hasCaseStudy = Boolean(p.problem);
               const cardClassName =
-                "rounded-xl border border-border bg-card p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3";
+                "rounded-xl border border-border bg-card p-8 shadow-sm" +
+                (p.link && !hasCaseStudy ? " hover:shadow-md transition-shadow block" : "");
               const cardContent = (
                 <>
-                  <div className="flex items-start justify-between gap-3">
-                    <h3 className="font-serif font-semibold text-foreground text-lg">{p.name}</h3>
-                    <span className="shrink-0 text-xs font-medium bg-accent-subtle text-accent-text px-2 py-1 rounded-full">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                    <h3 className="font-serif text-2xl font-bold text-foreground">{p.name}</h3>
+                    <span className="self-start shrink-0 text-xs font-medium bg-accent-subtle text-accent-text px-3 py-1 rounded-full">
                       {p.status}
                     </span>
                   </div>
-                  <p className="text-sm text-muted leading-relaxed">{p.tagline}</p>
-                  <div className="flex flex-wrap gap-2 mt-auto pt-2">
+
+                  <p className="text-base font-medium text-foreground mb-3 leading-relaxed">
+                    {p.tagline}
+                  </p>
+
+                  <p className="text-sm text-muted leading-relaxed mb-5">{p.description}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {p.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-xs bg-surface text-muted border border-border px-2 py-0.5 rounded-full"
+                        className="text-xs bg-surface text-muted border border-border px-2.5 py-1 rounded-full"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
+
+                  {p.link && !hasCaseStudy && (
+                    <div className="flex flex-wrap gap-3">
+                      <span className="px-4 py-2 rounded-lg bg-accent text-accent-fg text-sm font-semibold">
+                        Launch App
+                      </span>
+                    </div>
+                  )}
                 </>
               );
+
+              if (hasCaseStudy) {
+                return (
+                  <article key={p.slug} className={cardClassName}>
+                    {cardContent}
+                    <div className="flex flex-wrap gap-3">
+                      {p.link && (
+                        <a
+                          href={p.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-4 py-2 rounded-lg bg-accent text-accent-fg text-sm font-semibold hover:bg-accent-hover transition-colors"
+                        >
+                          Launch App
+                        </a>
+                      )}
+                      <Link
+                        href={`/portfolio/${p.slug}`}
+                        className="px-4 py-2 rounded-lg border border-border text-foreground text-sm font-semibold hover:bg-surface transition-colors"
+                      >
+                        Case Study
+                      </Link>
+                    </div>
+                  </article>
+                );
+              }
 
               return p.link ? (
                 <a
@@ -221,9 +255,9 @@ export default function Home() {
                   {cardContent}
                 </a>
               ) : (
-                <div key={p.slug} className={cardClassName}>
+                <article key={p.slug} className={cardClassName}>
                   {cardContent}
-                </div>
+                </article>
               );
             })}
           </div>

@@ -11,7 +11,7 @@ export default function Portfolio() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h1 className="font-serif text-3xl font-bold text-foreground">Portfolio</h1>
+        <h1 className="font-serif text-3xl font-bold text-foreground">Projects</h1>
         <p className="mt-2 text-muted">
           Products I&apos;m building — applying the same 0-to-1 thinking I use professionally.
         </p>
