@@ -18,17 +18,26 @@ const timeline: TimelineItem[] = [
     role: "Senior Program Manager, Cross-Border Delivery Experience",
     context: "Global commerce, demand forecasting, supply-chain systems",
     detail:
-      "I work on Cross-Border Delivery Experience, focused on improving how products move from sellers to customers across global marketplaces. My current work involves product requirements for Cross-Border buying integration with SCOT, partnering with science and engineering teams to improve demand forecasting and local in-stock outcomes.",
-    chips: ["Cross-Border Delivery", "Demand Forecasting", "SCOT Integration", "Science + Engineering"],
+      "I define requirements to integrate missing historical Cross-Border demand signals into Amazon's SCOT forecasting systems, partnering with science and SDE teams. The work is projected to reduce WAPE from 60% to 43% and increase Local In-Stock from 32% to 54%.",
+    chips: ["WAPE 60% → 43%", "Local In-Stock 32% → 54%", "SCOT Integration", "Cross-Border Delivery"],
   },
   {
-    years: "2025",
+    years: "Jun to Sep 2025",
     company: "Amazon",
-    role: "Senior Program Manager Intern, Brand Protection",
+    role: "Senior Program Manager Intern, Brand Abuse Prevention & Reporting",
     context: "Brand abuse reporting, GenAI copilot, reporting UX",
     detail:
-      "I owned journey analysis across Amazon Brand Protection reporting flows, mapping fragmented reporting paths and identifying where brands faced friction. I synthesized customer interviews, usability studies, and reporting data to define product recommendations, KPIs, and a GenAI reporting copilot concept.",
-    chips: ["700K+ brands", "1.2M reports/month", "23 reporting paths", "35+ interviews", "GenAI copilot"],
+      "I analyzed user journeys across 3 IP-violation reporting flows serving 700K+ brands and 1.5M reports per year, mapping 23 paths and synthesizing 35+ customer interviews and 12 usability studies into a roadmap aligned across 15+ stakeholders. I investigated time-to-report anomalies that uncovered automated bot abuse on the Public Notice Forum, recommending verification controls projected to prevent $35M in revenue loss. I also built a GenAI reporting copilot to route users, prefill data, and collect evidence, projecting 23% lower time-to-submit and 4.66M minutes saved annually.",
+    chips: ["700K+ brands", "1.5M reports/year", "$35M loss prevention", "23% faster submission", "GenAI copilot"],
+  },
+  {
+    years: "2024 / 2026",
+    company: "University of Washington, Foster School of Business",
+    role: "MBA (STEM), AI Specialization",
+    context: "Dean's Merit Scholar, VP of AI and Data Analytics Club",
+    detail:
+      "I'm pursuing my MBA with a STEM-designated AI specialization at Foster. As VP of the AI and Data Analytics Club, I organized 5 AI skills workshops and 10+ expert sessions.",
+    chips: ["Dean's Merit Scholar", "AI Specialization", "VP, AI & Data Analytics Club"],
   },
   {
     years: "2020 / 2024",
@@ -36,17 +45,26 @@ const timeline: TimelineItem[] = [
     role: "Senior Product Manager, Founding Team",
     context: "K-12 live learning, India market-entry, acquisition/growth",
     detail:
-      "I joined the India founding team to build and scale Yuanfudao's K-12 live learning business. I designed market-entry and acquisition strategy, built the free-trial-to-paid funnel, partnered on ML-based lead scoring, and defined gamification features to improve engagement and retention.",
-    chips: ["6M+ users", "55K+ paid users", "INR 1.1B revenue", "Lead scoring ML", "Gamification"],
+      "I joined the India founding team to design and launch Yuanfudao's market-entry acquisition strategy, converting free-trial users into paid courses through social-media-led campaigns. The platform scaled to 6M+ app users and 55K+ paid users, generating INR 1.1B (~$13.2M) in revenue over 3 years. I optimized the trial-to-paid funnel to sustain ~6.8% conversion, partnered on a gradient-boosting lead-scoring model that lifted conversion from 6.8% to 7.6%, and led product definition for gamification features (ODA Coins, leaderboards, badges) that increased course completion by 8% and retention by 3.5%.",
+    chips: ["6M+ users", "INR 1.1B (~$13.2M) revenue", "Lead scoring 6.8% → 7.6%", "Gamification +8% completion"],
   },
   {
-    years: "2017 / 2020",
+    years: "2018 / 2020",
     company: "T.I.M.E",
     role: "Product Manager, New Product Introductions",
-    context: "JEE learning products, B2B partnerships, video learning",
+    context: "JEE video learning, end-to-end product strategy, LMS delivery",
     detail:
-      "I led new product introductions for test-prep learning products, including a B2B JEE learning product and a JEE video-learning platform. The work combined product strategy, GTM, partner expansion, content operations, and LMS delivery.",
-    chips: ["1 → 17 partners", "INR 240M revenue", "JEE video learning", "LMS strategy"],
+      "I conceived and scaled a JEE video-learning platform as end-to-end owner, defining product strategy, content pipeline, and LMS delivery architecture, driving INR 70M (~$1M) in revenue through data-informed iteration.",
+    chips: ["INR 70M (~$1M) revenue", "JEE video learning", "LMS architecture"],
+  },
+  {
+    years: "2017 / 2018",
+    company: "T.I.M.E",
+    role: "Program Manager, New Product Introductions",
+    context: "B2B JEE learning product, GTM, partner scaling",
+    detail:
+      "As founding PM, I drove strategy and execution for a B2B JEE learning product, from GTM design through partner scaling and academic delivery. I expanded the partner network from 1 to 17 and generated INR 240M (~$3.4M) in revenue over 3 years.",
+    chips: ["1 → 17 partners", "INR 240M (~$3.4M) revenue", "B2B GTM"],
   },
   {
     years: "2016 / 2017",
@@ -54,8 +72,8 @@ const timeline: TimelineItem[] = [
     role: "Product Analyst",
     context: "Analytics product, diagnostic reports, student performance insights",
     detail:
-      "I started by owning requirements for an analytics platform upgrade for CAT aspirants, replacing legacy test reports with diagnostic insights that helped students understand performance gaps and improve preparation.",
-    chips: ["70K+ students", "CSAT +22%", "Conversion +17%", "Analytics product"],
+      "I owned the end-to-end redesign of AIMCAT's post-test analytics platform for 70K+ CAT aspirants, translating customer and competitor insights into technical requirements for scoring, accuracy, time-management, and question-selection diagnostics, and led cross-functional delivery across engineering, data, and academic teams.",
+    chips: ["70K+ students", "CSAT +22%", "Conversion +17%", "Analytics platform"],
   },
   {
     years: "Advisory / Consulting",
@@ -99,7 +117,7 @@ export default function StoryTimeline() {
             {/* Year + company — desktop column */}
             <div className="hidden sm:block pt-1">
               <p className="text-sm text-muted">{item.years}</p>
-              <p className="text-xs font-semibold uppercase tracking-wide text-accent-text mt-0.5">
+              <p className="text-xs font-semibold uppercase tracking-widest text-accent-text mt-0.5">
                 {item.company}
               </p>
             </div>
@@ -115,7 +133,7 @@ export default function StoryTimeline() {
               {/* Year + company — mobile only */}
               <div className="sm:hidden mb-1.5">
                 <p className="text-sm text-muted">{item.years}</p>
-                <p className="text-xs font-semibold uppercase tracking-wide text-accent-text mt-0.5">
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent-text mt-0.5">
                   {item.company}
                 </p>
               </div>

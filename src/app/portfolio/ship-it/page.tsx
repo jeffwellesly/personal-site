@@ -398,7 +398,7 @@ export default function ShipItSpecPage() {
                 key={title}
                 className="rounded-xl border border-border bg-card p-5 shadow-sm"
               >
-                <h3 className="font-semibold text-foreground mb-1.5">{title}</h3>
+                <h3 className="font-serif font-semibold text-foreground mb-1.5">{title}</h3>
                 <p className="text-sm text-muted leading-relaxed">{body}</p>
               </div>
             ))}

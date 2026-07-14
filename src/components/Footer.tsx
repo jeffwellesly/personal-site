@@ -39,9 +39,15 @@ export default function Footer() {
             >
               <GitHubIcon />
             </a>
-            <span title="Resume coming soon" className="text-faint cursor-default">
+            <a
+              href="/resume/Jeff-Wellesly-Resume.pdf"
+              download="Jeff Wellesly Resume.pdf"
+              aria-label="Download resume"
+              title="Jeff Wellesly Resume"
+              className="text-muted hover:text-accent-text transition-colors"
+            >
               <ResumeIcon />
-            </span>
+            </a>
           </div>
 
           <p className="text-sm text-faint">

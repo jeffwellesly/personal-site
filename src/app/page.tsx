@@ -211,13 +211,16 @@ export default function Home() {
                 GitHub
               </a>
               <span className="text-border select-none">·</span>
-              <span
-                title="Resume coming soon"
-                className="flex items-center gap-1.5 text-sm font-medium text-faint cursor-default select-none"
+              <a
+                href="/resume/Jeff-Wellesly-Resume.pdf"
+                download="Jeff Wellesly Resume.pdf"
+                aria-label="Download resume"
+                title="Jeff Wellesly Resume"
+                className="flex items-center gap-1.5 text-sm font-medium text-muted hover:text-accent-text transition-colors"
               >
                 <ResumeIcon />
                 Resume
-              </span>
+              </a>
             </div>
           </div>
         </Reveal>
@@ -226,7 +229,7 @@ export default function Home() {
       {/* 02 / STORY */}
       <section id="story" className={sectionClass}>
         <Reveal className="max-w-2xl mx-auto w-full flex flex-col gap-3 text-center lg:text-left">
-          <h2 className="text-sm font-semibold text-muted uppercase tracking-widest">
+          <h2 className="text-xs font-semibold text-muted uppercase tracking-widest">
             Story
           </h2>
           <h3 className="font-serif text-2xl sm:text-3xl font-bold text-foreground">
@@ -482,16 +485,16 @@ export default function Home() {
               GitHub
             </a>
             <span className="text-border select-none">·</span>
-            <span
-              title="Resume coming soon"
-              className="flex items-center gap-2 text-sm font-medium text-faint cursor-default select-none"
+            <a
+              href="/resume/Jeff-Wellesly-Resume.pdf"
+              download="Jeff Wellesly Resume.pdf"
+              aria-label="Download resume"
+              title="Jeff Wellesly Resume"
+              className="flex items-center gap-2 text-sm font-medium text-muted hover:text-accent-text transition-colors"
             >
               <ResumeIcon />
               Resume
-              <span className="text-xs bg-accent-subtle text-accent-text px-1.5 py-0.5 rounded-full">
-                soon
-              </span>
-            </span>
+            </a>
           </div>
         </Reveal>
       </section>

@@ -68,25 +68,25 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
 
       <div className="flex flex-col gap-8">
         <section>
-          <h2 className="text-xl font-semibold text-foreground mb-2">Overview</h2>
+          <h2 className="font-serif text-xl font-semibold text-foreground mb-2">Overview</h2>
           <p className="text-base text-muted leading-relaxed">{project.description}</p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-foreground mb-2">The problem</h2>
+          <h2 className="font-serif text-xl font-semibold text-foreground mb-2">The problem</h2>
           <p className="text-base text-muted leading-relaxed">{project.problem}</p>
         </section>
 
         {project.targetUsers && (
           <section>
-            <h2 className="text-xl font-semibold text-foreground mb-2">Who it&apos;s for</h2>
+            <h2 className="font-serif text-xl font-semibold text-foreground mb-2">Who it&apos;s for</h2>
             <p className="text-base text-muted leading-relaxed">{project.targetUsers}</p>
           </section>
         )}
 
         {project.myRole && (
           <section>
-            <h2 className="text-xl font-semibold text-foreground mb-2">My role</h2>
+            <h2 className="font-serif text-xl font-semibold text-foreground mb-2">My role</h2>
             <p className="text-base text-muted leading-relaxed">{project.myRole}</p>
           </section>
         )}
