@@ -45,8 +45,8 @@ const timeline: TimelineItem[] = [
     role: "Senior Product Manager, Founding Team",
     context: "K-12 live learning, India market-entry, acquisition/growth",
     detail:
-      "I joined the India founding team to design and launch Yuanfudao's market-entry acquisition strategy, converting free-trial users into paid courses through social-media-led campaigns. The platform scaled to 6M+ app users and 55K+ paid users, generating INR 1.1B (~$13.2M) in revenue over 3 years. I optimized the trial-to-paid funnel to sustain ~6.8% conversion, partnered on a gradient-boosting lead-scoring model that lifted conversion from 6.8% to 7.6%, and led product definition for gamification features (ODA Coins, leaderboards, badges) that increased course completion by 8% and retention by 3.5%.",
-    chips: ["6M+ users", "INR 1.1B (~$13.2M) revenue", "Lead scoring 6.8% → 7.6%", "Gamification +8% completion"],
+      "I partnered with the CEO and global investors to design Yuanfudao's India market-entry strategy, converting free-trial users into paid courses through social-media-led campaigns. The platform scaled to 6M+ users and 55K+ paid customers, generating INR 1.1B (~$13.2M) over three years. I optimized the trial-to-paid funnel through campaign iteration, sales scripting, onboarding, and Fast Track, a compressed-curriculum offering for late-enrollment leads, generating INR 240M and expanding the paid base by 68%. I also partnered on a gradient-boosting lead-scoring model that lifted conversion from 6.8% to 7.6%, and led product definition for gamification features (ODA Coins, leaderboards, badges) that increased course completion by 13% and retention by 6.7%.",
+    chips: ["6M+ users", "INR 1.1B (~$13.2M) revenue", "Fast Track +68% paid base", "Lead scoring 6.8% → 7.6%", "Gamification +13% completion"],
   },
   {
     years: "2018 / 2020",
