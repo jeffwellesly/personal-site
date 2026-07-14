@@ -36,7 +36,7 @@ const timeline: TimelineItem[] = [
     role: "MBA (STEM), AI Specialization",
     context: "Dean's Merit Scholar, VP of AI and Data Analytics Club",
     detail:
-      "I'm pursuing my MBA with a STEM-designated AI specialization at Foster. As VP of the AI and Data Analytics Club, I organized 5 AI skills workshops and 10+ expert sessions.",
+      "I completed my MBA with a STEM-designated AI specialization at Foster. As VP of the AI and Data Analytics Club, I organized 5 AI skills workshops and 10+ expert sessions.",
     chips: ["Dean's Merit Scholar", "AI Specialization", "VP, AI & Data Analytics Club"],
   },
   {
