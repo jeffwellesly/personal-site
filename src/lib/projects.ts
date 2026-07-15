@@ -38,12 +38,26 @@ export const projects: Project[] = [
   },
   {
     slug: "alpha-hunter",
-    name: "Alpha Hunter",
-    tagline: "Automatic stock analysis app that surfaces investment signals before the crowd catches on.",
+    name: "AlphaHunter",
+    tagline:
+      "A personal equity-research log — every stock I analyze, published in the open with the same five-step method and a fully-sourced Word memo for anyone to verify.",
     description:
-      "Alpha Hunter automates the tedious parts of stock research: scanning filings, earnings calls, and market data to surface actionable signals. The goal is to give individual investors the kind of systematic analysis that was previously only available to quant funds.",
+      "AlphaHunter is where I publish my own stock valuations, not a tool that runs analyses on a reader's behalf. Every ticker goes through the same fixed process: peer trading multiples, a residual income valuation (RIM) model, DuPont decomposition of ROE, a cash-flow quality checklist, and an analyst-consensus optimism-bias check. There's no login and no accounts — it's a single-publisher research log, not a SaaS product. Each write-up ships with a downloadable Word memo that includes a References & Sources section listing the exact URL each number came from and what was pulled from it, so a reader can independently verify every figure instead of taking a black-box verdict on faith. Research is done using Claude's web search rather than a paid financials API, which keeps the analysis honest about what could and couldn't be cleanly sourced.",
     status: "Live Product",
-    tags: ["Fintech", "AI/ML", "Stock Analysis", "Automation"],
-    link: "https://alpha-hunter-jeff.vercel.app/",
+    tags: [
+      "Fintech",
+      "AI/ML",
+      "Equity Research",
+      "Valuation",
+      "Content Publishing",
+      "Claude Code",
+    ],
+    link: "https://alpha-hunter-six.vercel.app/",
+    problem:
+      "Most retail stock research is either a black-box buy/sell signal with no visible work, or a paid tool that assumes the reader wants to run their own analysis. I wanted a place to publish my own valuation work transparently enough that a skeptical reader could check every number against its source themselves.",
+    targetUsers:
+      "Readers who want to see how a real equity valuation is built — peer multiples, a residual income model, DuPont, cash-flow quality, and analyst sentiment — with full source citations, not just a final verdict.",
+    myRole:
+      "Product concept, the full valuation methodology (RIM.512 residual income model, comps, DuPont, cash-flow quality checklist, optimism-bias check), the AI-assisted research and citation pipeline, and the full-stack build (React, Vercel), including the downloadable, fully-sourced Word memo export.",
   },
 ];
