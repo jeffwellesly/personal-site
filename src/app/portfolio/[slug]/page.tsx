@@ -3,17 +3,22 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
 
-// "ship-it" has its own dedicated spec page at /portfolio/ship-it/page.tsx —
-// excluded here so the two routes don't both try to generate the same path.
+// "ship-it" and "alpha-hunter" each have their own dedicated spec page
+// (/portfolio/ship-it/page.tsx, /portfolio/alpha-hunter/page.tsx) — excluded
+// here so those routes don't both try to generate the same path.
+const DEDICATED_SLUGS = ["ship-it", "alpha-hunter"];
+
 function getCaseStudy(slug: string) {
-  if (slug === "ship-it") return null;
+  if (DEDICATED_SLUGS.includes(slug)) return null;
   const project = projects.find((p) => p.slug === slug);
   if (!project || !project.problem) return null;
   return project;
 }
 
 export function generateStaticParams() {
-  return projects.filter((p) => p.problem && p.slug !== "ship-it").map((p) => ({ slug: p.slug }));
+  return projects
+    .filter((p) => p.problem && !DEDICATED_SLUGS.includes(p.slug))
+    .map((p) => ({ slug: p.slug }));
 }
 
 export function generateMetadata({
